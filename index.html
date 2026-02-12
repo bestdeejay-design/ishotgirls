@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISHOT - Find Your Inspiration, Follow Your Idol</title>
+    <meta name="description" content="Discover fitness inspiration from Instagram models @ishotgirls and @ishotstars">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+</head>
+<body>
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button id="themeToggle">
+            <span class="sun-icon">☀️</span>
+            <span class="moon-icon">🌙</span>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">ISHOT</div>
+            <ul class="nav-links">
+                <li><a href="#models">Models</a></li>
+                <li><a href="#brands">Brands</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-background">
+            <div class="floating-element element-1">💪</div>
+            <div class="floating-element element-2">🏃‍♀️</div>
+            <div class="floating-element element-3">🧘‍♀️</div>
+            <div class="floating-element element-4">🍎</div>
+            <div class="floating-element element-5">🏋️‍♀️</div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Discover Your Fitness Inspiration</h1>
+            <p class="hero-subtitle">Find Your Idol. Follow Their Journey. Transform Your Life.</p>
+            <div class="hero-buttons">
+                <button class="cta-button explore-btn">Explore Models</button>
+                <button class="cta-button brands-btn">View Brands</button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </section>
+
+    <!-- Models Section -->
+    <section id="models" class="models-section">
+        <div class="container">
+            <h2 class="section-title">Our Models</h2>
+            <p class="section-subtitle">Meet the inspiring individuals behind @ishotgirls and @ishotstars</p>
+            
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="fitness">Fitness</button>
+                <button class="filter-btn" data-filter="yoga">Yoga</button>
+                <button class="filter-btn" data-filter="nutrition">Nutrition</button>
+                <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+            </div>
+            
+            <div class="models-grid">
+                <!-- Model Cards will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section id="brands" class="brands-section">
+        <div class="container">
+            <h2 class="section-title">Featured Brands</h2>
+            <p class="section-subtitle">Brands our models love and promote</p>
+            
+            <div class="brand-cloud">
+                <div class="brand-item">FitLife</div>
+                <div class="brand-item">ActiveWear</div>
+                <div class="brand-item">Pure Nutrition</div>
+                <div class="brand-item">GymGear</div>
+                <div class="brand-item">Wellness Co</div>
+                <div class="brand-item">ShapeUp</div>
+                <div class="brand-item">Energy Boost</div>
+                <div class="brand-item">Core Fitness</div>
+                <div class="brand-item">Vitality</div>
+                <div class="brand-item">Peak Performance</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="disclaimer">This website is created as a demonstration prototype to showcase the maximum capabilities of AI in web development</p>
+                <div class="social-icons">
+                    <div class="social-icon">📷</div>
+                    <div class="social-icon">📱</div>
+                    <div class="social-icon">💬</div>
+                </div>
+                <p class="copyright">© 2026 ISHOT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <!-- Instagram Post Popup Template -->
+    <div id="instagramPopup" class="instagram-popup">
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <div class="instagram-post">
+                <div class="post-header">
+                    <img src="" alt="" class="profile-pic">
+                    <div class="username">@username</div>
+                </div>
+                <div class="post-image">
+                    <img src="" alt="">
+                </div>
+                <div class="post-actions">
+                    <button class="action-btn">❤️</button>
+                    <button class="action-btn">💬</button>
+                    <button class="action-btn">↪️</button>
+                </div>
+                <div class="post-caption">
+                    <p>Caption goes here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
