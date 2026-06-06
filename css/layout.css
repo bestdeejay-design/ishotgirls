@@ -1,0 +1,152 @@
+/* Layout styles */
+.main-content {
+  margin-left: 80px;
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 0 24px;
+}
+
+.hero-title {
+  font-size: 72px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  letter-spacing: -2px;
+  color: var(--text-primary);
+}
+
+.hero-subtitle {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 48px;
+  color: var(--text-secondary);
+  font-family: 'Lora', serif;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.models-section {
+  background-color: var(--bg-secondary);
+}
+
+.models-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 32px;
+  padding: 0 24px;
+}
+
+.lifestyle-section {
+  background-color: var(--bg-primary);
+}
+
+.lifestyle-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lifestyle-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  font-family: 'Lora', serif;
+}
+
+.lifestyle-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.feature-card {
+  background: var(--card-bg);
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+.feature-card h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+  font-family: 'Lora', serif;
+}
+
+.brands-section {
+  background-color: var(--bg-secondary);
+}
+
+.about-section {
+  background-color: var(--bg-primary);
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  font-family: 'Lora', serif;
+}
+
+.footer {
+  background-color: var(--bg-secondary);
+  padding: 48px 0 24px;
+  margin-top: 120px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.footer-content p {
+  margin-bottom: 16px;
+  color: var(--text-secondary);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.disclaimer {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-top: 24px;
+}

@@ -1,0 +1,82 @@
+/* Base styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  scroll-margin-top: 120px;
+  padding: 120px 0;
+}
+
+.section-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 64px;
+  letter-spacing: -1px;
+  color: var(--text-primary);
+}
+
+.btn {
+  padding: 16px 32px;
+  border-radius: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: var(--accent-pink);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #FF0055;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 51, 102, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 2px solid var(--accent-pink);
+}
+
+.btn-secondary:hover {
+  background: var(--accent-pink);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Typography */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
