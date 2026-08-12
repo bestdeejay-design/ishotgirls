@@ -113,7 +113,12 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 .manifesto blockquote em{color:var(--accent)}
 .manifesto p{margin-top:26px;color:var(--muted);max-width:52ch;margin-left:auto;margin-right:auto}
 
+.to-top{position:fixed;right:22px;bottom:22px;z-index:60;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:blur(8px);color:var(--fg);font-size:18px;line-height:1;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s,transform .25s,visibility .25s}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top:hover{background:var(--accent);color:var(--bg)}
+
 /* footer */
+
 footer{border-top:1px solid var(--line);padding:42px 5vw}
 .foot{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center;max-width:1400px;margin:0 auto;font-family:var(--font-m);font-size:11px;letter-spacing:.08em;color:var(--muted)}
 .foot a{color:var(--accent)}
@@ -128,7 +133,7 @@ footer{border-top:1px solid var(--line);padding:42px 5vw}
 
 <header class="masthead">
   <div style="display:flex;align-items:center;gap:14px">
-    <span class="mast">ISHOT <i>№01</i></span>
+    <a class="mast" href="#cover" aria-label="Back to top">ISHOT <i>№01</i></a>
     <span class="issue-tag">The Training Journal</span>
   </div>
   <ul class="menu">
@@ -229,7 +234,14 @@ footer{border-top:1px solid var(--line);padding:42px 5vw}
   </div>
 </footer>
 
+<button class="to-top" id="toTop" aria-label="Back to top" aria-hidden="true">↑</button>
 <script>
+const toTop = document.getElementById('toTop');
+const toTopLabel = () => { const show = window.scrollY > 600; toTop.classList.toggle('show', show); toTop.setAttribute('aria-hidden', String(!show)); };
+window.addEventListener('scroll', toTopLabel, { passive: true });
+toTopLabel();
+toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
 const themeBtn = document.getElementById('themeBtn');
 const applyTheme = (t) => {
   document.documentElement.dataset.theme = t;
