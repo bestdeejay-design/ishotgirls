@@ -137,7 +137,7 @@ glamorous, not motivational-poster — real, but put together.
 
 ---
 
-### 2.5 A03 — Sofia · Calisthenics (уличный турник) · 3:4 · ⏳ генерируется
+### 2.5 A03 — Sofia · Calisthenics (уличный турник) · 3:4 · ✅ в продакшене
 
 Локация — воркаут-площадка в городском сквере на рассвете (городской
 спорт, без зала).
@@ -199,4 +199,5 @@ boulders, outdoor climbing holds, spectators, children playground
   пробежки (нативный 3:4, 768×1024)** — коммит `2020b71`
 - `athlete-anna.webp`, `athlete-maria.webp` — **заменены на пользовательские фото
   городского зала (нативный 3:4, 768×1024)** — коммит `3724685`
-- `athlete-sofia.webp` — в работе (промт 2.5)
+- `athlete-sofia.webp` — **заменён на пользовательское фото воркаута
+  в городском сквере (нативный 3:4, 768×1024)** — коммит `d425beb`
