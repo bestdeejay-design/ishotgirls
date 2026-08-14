@@ -92,7 +92,7 @@ and trimmed hedges, early morning, almost no people`.
 
 ---
 
-### 2.3 A01 — Anna · Strength (силовая тренировка) · 3:4 · ⏳ генерируется
+### 2.3 A01 — Anna · Strength (силовая тренировка) · 3:4 · ✅ в продакшене
 
 Локация — скромный городской зал (old-school), никакого глянцевого
 фитнес-клуба.
@@ -115,7 +115,7 @@ Not glamorous, not motivational-poster — real, but put together.
 
 ---
 
-### 2.4 A02 — Maria · Powerlifting (становая тяга) · 3:4 · ⏳ генерируется
+### 2.4 A02 — Maria · Powerlifting (становая тяга) · 3:4 · ✅ в продакшене
 
 Локация — тот же скромный городской зал.
 
@@ -167,4 +167,5 @@ wilderness, cardio machines, group fitness class
   512×320, композиция сохранена)** — коммиты `4290e9a`, `66ce833`
 - `athlete-olivia-v2.webp` — **заменён на пользовательское фото городской
   пробежки (нативный 3:4, 768×1024)** — коммит `2020b71`
-- `athlete-anna.webp`, `athlete-maria.webp` — в работе (промты 2.3, 2.4)
+- `athlete-anna.webp`, `athlete-maria.webp` — **заменены на пользовательские фото
+  городского зала (нативный 3:4, 768×1024)** — коммит `3724685`
