@@ -92,6 +92,51 @@ and trimmed hedges, early morning, almost no people`.
 
 ---
 
+### 2.3 A01 — Anna · Strength (силовая тренировка) · 3:4 · ⏳ генерируется
+
+Локация — скромный городской зал (old-school), никакого глянцевого
+фитнес-клуба.
+
+```
+Editorial fitness-journal photograph, vertical 3:4. A well-groomed young
+woman mid-strength training session in an old-school city gym at dawn —
+performing a controlled barbell overhead press, standing tall, core
+braced, gaze focused straight ahead. She looks healthy and taken care of:
+skin fresh with a light natural flush, hair in a clean tight ponytail, no
+makeup. She wears a fitted charcoal training top and dark moss-olive
+leggings — quality training clothes, clean and intentional, not a brand
+campaign. Quiet raw gym: worn black rubber floor, chalk dust in the air,
+industrial windows letting in soft morning light, long shadows across the
+platform. Palette of deep ink blacks, warm paper ivory, muted olive green
+and tan — desaturated, honest, quiet. Editorial documentary style, shot on
+35mm, fine film grain, shallow depth of field, real effort and calm focus.
+Not glamorous, not motivational-poster — real, but put together.
+```
+
+---
+
+### 2.4 A02 — Maria · Powerlifting (становая тяга) · 3:4 · ⏳ генерируется
+
+Локация — тот же скромный городской зал.
+
+```
+Editorial fitness-journal photograph, vertical 3:4. A well-groomed young
+woman performing a deadlift in an old-school city gym at dawn — standing
+over the barbell, back flat, arms straight, just before the pull, eyes
+down on the bar. She looks healthy and taken care of: skin fresh with a
+light natural flush, hair in a clean tight ponytail, no makeup. She wears
+a fitted charcoal training top and dark moss-olive leggings — quality
+training clothes, clean and intentional, not a brand campaign. Loaded
+barbell with black iron plates on a worn rubber platform, chalk dust in
+the air, industrial windows with soft morning light, long shadows. Palette
+of deep ink blacks, warm paper ivory, muted olive green and tan —
+desaturated, honest, quiet. Editorial documentary style, shot on 35mm,
+fine film grain, shallow depth of field, real effort and calm focus. Not
+glamorous, not motivational-poster — real, but put together.
+```
+
+---
+
 ## 3. Негативные промты
 
 Общий:
@@ -108,6 +153,12 @@ forest, wilderness, trail in the woods, mud, dirt road, mountains, fields,
 treadmill, race bib number, race photos, grimacing
 ```
 
+Для зала (2.3, 2.4) дополнительно:
+```
+neon lights, mirror walls, luxury gym, glamour, outdoor nature, forest,
+wilderness, cardio machines, group fitness class
+```
+
 ---
 
 ## 4. Хронология
@@ -116,3 +167,4 @@ treadmill, race bib number, race photos, grimacing
   512×320, композиция сохранена)** — коммиты `4290e9a`, `66ce833`
 - `athlete-olivia-v2.webp` — **заменён на пользовательское фото городской
   пробежки (нативный 3:4, 768×1024)** — коммит `2020b71`
+- `athlete-anna.webp`, `athlete-maria.webp` — в работе (промты 2.3, 2.4)
