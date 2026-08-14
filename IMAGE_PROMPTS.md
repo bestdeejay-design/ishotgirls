@@ -137,6 +137,30 @@ glamorous, not motivational-poster — real, but put together.
 
 ---
 
+### 2.5 A03 — Sofia · Calisthenics (уличный турник) · 3:4 · ⏳ генерируется
+
+Локация — воркаут-площадка в городском сквере на рассвете (городской
+спорт, без зала).
+
+```
+Editorial fitness-journal photograph, vertical 3:4. A well-groomed young
+woman doing a strict pull-up on an outdoor calisthenics bar in a city park
+at dawn — chin just above the bar, body straight and controlled, core
+engaged, gaze calm and focused ahead. She looks healthy and taken care of:
+skin fresh with a light natural flush, hair in a clean tight ponytail, no
+makeup. She wears a fitted moisture-wicking top in muted olive and dark
+charcoal leggings — quality training clothes, clean and intentional, not a
+brand campaign. Quiet outdoor workout spot: black steel bar frame, soft
+rubber ground tiles, park trees and neat hedges around, thin morning mist,
+low golden light through the branches, long soft shadows. Palette of deep
+ink blacks, warm paper ivory, muted olive green and tan — desaturated,
+honest, quiet. Editorial documentary style, shot on 35mm, fine film grain,
+shallow depth of field, real effort and calm focus. Not glamorous, not
+motivational-poster — real, but put together.
+```
+
+---
+
 ## 3. Негативные промты
 
 Общий:
@@ -159,6 +183,12 @@ neon lights, mirror walls, luxury gym, glamour, outdoor nature, forest,
 wilderness, cardio machines, group fitness class
 ```
 
+Для воркаута (2.5) дополнительно:
+```
+indoor gym, ceiling, mirror walls, treadmill, forest, wilderness, mountain
+boulders, outdoor climbing holds, spectators, children playground
+```
+
 ---
 
 ## 4. Хронология
@@ -169,3 +199,4 @@ wilderness, cardio machines, group fitness class
   пробежки (нативный 3:4, 768×1024)** — коммит `2020b71`
 - `athlete-anna.webp`, `athlete-maria.webp` — **заменены на пользовательские фото
   городского зала (нативный 3:4, 768×1024)** — коммит `3724685`
+- `athlete-sofia.webp` — в работе (промт 2.5)
