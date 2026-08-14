@@ -66,26 +66,29 @@ motivational-poster — real, but put together.
 
 ---
 
-### 2.2 A04 — Olivia · Trail run (утренний бег на природе) · 3:4 · ⏳ генерируется
+### 2.2 A04 — Olivia · Morning run (утренняя пробежка в городе) · 3:4 · ⏳ генерируется
+
+Все девушки ростера — городские: локация — сквер или набережная, не лес.
 
 ```
 Editorial fitness-journal photograph, vertical 3:4. A well-groomed young
-woman running on a soft forest trail at dawn — mid-stride, natural running
-form, arms relaxed, gaze ahead on the path. She looks healthy and taken
-care of: skin fresh with a light natural flush, hair in a clean high
-ponytail, a few loose strands in the morning air. She wears a fitted
-moisture-wicking top in muted olive and dark charcoal running shorts —
-quality training clothes, clean and intentional, not a brand campaign.
-Thin morning mist between the trees, low golden light breaking through the
-canopy, long soft shadows on the trail. Palette of deep ink blacks, warm
-paper ivory, muted olive green and tan — desaturated, honest, quiet.
-Editorial documentary style, shot on 35mm, fine film grain, shallow depth
-of field, sense of real effort and calm focus. Not glamorous, not
-motivational-poster — real, but put together.
+woman running at dawn along a riverside embankment promenade in the city —
+mid-stride, natural running form, arms relaxed, gaze ahead on the path.
+She looks healthy and taken care of: skin fresh with a light natural
+flush, hair in a clean high ponytail, a few loose strands in the morning
+air. She wears a fitted moisture-wicking top in muted olive and dark
+charcoal running shorts — quality training clothes, clean and intentional,
+not a brand campaign. Soft golden morning light, city park trees and neat
+lanterns on one side, calm river water on the other, long soft shadows on
+the pavement. Palette of deep ink blacks, warm paper ivory, muted olive
+green and tan — desaturated, honest, quiet. Editorial documentary style,
+shot on 35mm, fine film grain, shallow depth of field, sense of real
+effort and calm focus. Not glamorous, not motivational-poster — real, but
+put together.
 ```
 
-Дополнение под руку (опционально): `forest path winding ahead, soft dirt
-surface, breath visible in cool morning air`.
+Дополнение под руку (опционально): `quiet city park path instead, benches
+and trimmed hedges, early morning, almost no people`.
 
 ---
 
@@ -101,8 +104,8 @@ poster typography, crowds, commercial fitness ad
 
 Для бега (2.2) дополнительно:
 ```
-gym, treadmill, city streets, traffic, asphalt, road race, bib number,
-race photos, sprint sprint pose, grimacing
+forest, wilderness, trail in the woods, mud, dirt road, mountains, fields,
+treadmill, race bib number, race photos, grimacing
 ```
 
 ---
