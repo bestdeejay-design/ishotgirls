@@ -37,7 +37,7 @@
 **Форматы картинок на сайте:**
 | Фото | Блок | Соотношение | Целевой размер |
 |---|---|---|---|
-| `cover.webp` | Обложка | 4:5 | 764×1024 |
+| `cover.webp` | Обложка | 4:5 | 768×960 |
 | `og-image.png` | OG-превью | 2:1 | 1280×640 |
 | `athlete-*.webp` (6 шт) | Ростер | 3:4 | 768×1024 |
 | `column-train.webp` | Колонка Train | 16:10 | 512×320 |
@@ -87,22 +87,28 @@ green and tan — desaturated, honest. Editorial documentary style, shot on
 motivational-poster — real, but put together.
 ```
 
-### 3.2 OG-превью — H (то же лицо номера), 2:1
+### 3.2 OG-превью — СОСТАВНАЯ КАРТОЧКА ИЗ HERO (НЕ кроп фото) · 2:1
 
-Тот же типаж H (29, средиземноморка), крупнее, широкий кадр для соцсетей.
+OG-превью **не генерируется как отдельное фото**. Оно собирается
+программно (Pillow) из элементов hero-секции сайта:
+
+- фон `--ink` `#1B1B18`;
+- слева: бренд `ISHOT №01` (Georgia Bold + Italic акцент), подпись
+  `THE TRAINING JOURNAL` (JetBrains Mono / Menlo), kicker
+  `ISSUE №01 — UNFILTERED · 47 ATHLETES · 214 TRANSFORMATIONS`,
+  заголовок `The training / behind the grid.` (вторая строка — акцент,
+  italic), sub и строка статистики;
+- справа: готовый `cover.webp` как вертикальная панель (cover, центральный
+  кроп под ширину панели), с `issue-badge` «ISSUE №01» (зелёный фон, paper)
+  и зелёным угловым правилом `.rule`;
+- палитра токенов сайта (ink / paper / olive / tan).
+
+Размер 1280×640 (2:1), экспорт в PNG (так в meta `og:image`). Шрифты:
+Georgia (serif, фолбэк сайта) + Menlo (mono). Исходник — уже готовый
+`cover.webp`, отдельный файл от пользователя не требуется.
 
 ```
-Editorial fitness-journal photograph, wide 2:1. A confident well-groomed
-woman, 29 years old, of Mediterranean type — olive skin, dark hair to her
-shoulders, strong defined features. Three-quarter body, standing in an
-old-school city gym at dawn, one hand on a barbell rack, relaxed confident
-posture, calm gaze. Skin fresh with a light natural flush, no makeup.
-Fitted charcoal training top and dark moss-olive leggings — quality
-training clothes. Industrial windows, soft golden morning light, long
-shadows, chalk dust in the air. Palette of deep ink blacks, warm paper
-ivory, muted olive green and tan — desaturated, honest. Editorial
-documentary style, shot on 35mm, fine film grain. Not glamorous, not
-motivational-poster — real, but put together.
+# сборка: /tmp/og_build.py (Pillow) -> img/og-image.png (1280x640)
 ```
 
 ### 3.3 A01 — Anna · Strength (силовая, зал) · 3:4
@@ -122,104 +128,91 @@ fine film grain, shallow depth of field. Not glamorous, not
 motivational-poster — real, but put together.
 ```
 
-### 3.4 A02 — Maria · Powerlifting (становая) · 3:4
+### 3.4 A02 — Maria · Powerlifting · 3:4
+
+**Лёгкий промт** (без микроменеджмента позы/гардероба — модель сама
+компонует кадр, качество выше):
 
 ```
 Editorial fitness-journal photograph, vertical 3:4. A well-groomed woman,
 30 years old, of Slavic type — fair skin with light freckles, chestnut
-hair to her shoulders, a sturdy athletic build. In an old-school city gym
-at dawn performing a deadlift — over the barbell, back flat, arms
-straight, just before the pull, eyes down on the bar. Skin fresh with a
-light natural flush, no makeup. Fitted charcoal training top and dark
-moss-olive leggings — quality training clothes, clean and intentional.
-Loaded barbell with black iron plates on a worn rubber platform, chalk
-dust, industrial windows, long shadows. Palette of deep ink blacks, warm
-paper ivory, muted olive green and tan — desaturated, honest. Editorial
-documentary style, shot on 35mm, fine film grain, shallow depth of field.
-Not glamorous, not motivational-poster — real, but put together.
+hair to her shoulders, a sturdy athletic build. Powerlifting. An
+old-school city gym at dawn, natural morning light, chalk dust, long
+shadows. Desaturated honest palette: deep ink blacks, warm paper ivory,
+muted olive green, tan. Shot on 35mm, fine film grain, shallow depth of
+field. Real, but put together — not glamorous, not a motivational poster.
 ```
 
-### 3.5 A03 — Sofia · Calisthenics (уличный турник) · 3:4
+### 3.5 A03 — Sofia · Calisthenics · 3:4
+
+**Лёгкий промт:**
 
 ```
 Editorial fitness-journal photograph, vertical 3:4. A well-groomed woman,
-32 years old, of African type — deep dark skin, curly black hair, a
-wide warm smile. Doing a strict pull-up on an outdoor calisthenics bar in
-a city park at dawn — chin just above the bar, body straight and
-controlled, core engaged, calm focused gaze. Skin fresh with a light
-natural glow, no makeup. Fitted moisture-wicking top in muted olive and
-dark charcoal leggings — quality training clothes. Black steel bar frame,
-rubber ground tiles, park trees and hedges, thin morning mist, low golden
-light through branches, long shadows. Palette of deep ink blacks, warm
-paper ivory, muted olive green and tan — desaturated, honest. Editorial
-documentary style, shot on 35mm, fine film grain, shallow depth of field.
-Not glamorous, not motivational-poster — real, but put together.
+32 years old, of African type — deep dark skin, curly black hair, a wide
+warm smile. Calisthenics, outdoor in a city park at dawn — pull-up bars,
+thin morning mist, low golden light through branches, long shadows.
+Desaturated honest palette: deep ink blacks, warm paper ivory, muted olive
+green, tan. Shot on 35mm, fine film grain, shallow depth of field. Real,
+but put together — not glamorous, not a motivational poster.
 ```
 
-### 3.6 A04 — Olivia · Running (набережная) · 3:4
+### 3.6 A04 — Olivia · Running · 3:4
+
+**Лёгкий промт:**
 
 ```
 Editorial fitness-journal photograph, vertical 3:4. A well-groomed woman,
-26 years old, of Northern European type — fair porcelain skin, blonde
-hair in a high ponytail, a fine delicate face. Running at dawn along a
-riverside embankment promenade in the city — mid-stride, natural running
-form, arms relaxed, gaze ahead. Skin fresh with a light natural flush, no
-makeup. Fitted moisture-wicking top in muted olive and dark charcoal
-running shorts — quality training clothes. Soft golden morning light, city
-park trees and lanterns on one side, calm river on the other, long soft
-shadows on the pavement. Palette of deep ink blacks, warm paper ivory,
-muted olive green and tan — desaturated, honest. Editorial documentary
-style, shot on 35mm, fine film grain, shallow depth of field. Not
-glamorous, not motivational-poster — real, but put together.
+26 years old, of Northern European type — fair porcelain skin, blonde hair
+in a high ponytail, a fine delicate face. Running at dawn along a city
+riverside embankment — soft golden light, park trees and lanterns on one
+side, calm river on the other, long soft shadows. Desaturated honest
+palette: deep ink blacks, warm paper ivory, muted olive green, tan. Shot
+on 35mm, fine film grain, shallow depth of field. Real, but put together —
+not glamorous, not a motivational poster.
 ```
 
-### 3.7 A05 — Emma · Nutrition (meal prep, кухня) · 3:4
+### 3.7 A05 — Emma · Nutrition · 3:4
+
+**Лёгкий промт:**
 
 ```
 Editorial fitness-journal photograph, vertical 3:4. A well-groomed woman,
 27 years old, of Latina type — warm tan skin, dark hair to her shoulders,
-soft gentle features. In a tidy city apartment kitchen at morning light,
-arranging a meal-prep bowl: grilled chicken, quinoa, roasted vegetables,
-fresh greens on a clean wooden board. Calm focused expression, no makeup,
-hair in a loose low tie. She wears a soft neutral linen top — quality,
-clean, intentional, not a brand campaign. Warm window light, soft shadows,
-a few plants on the windowsill. Palette of deep ink blacks, warm paper
-ivory, muted olive green and tan — desaturated, honest. Editorial
-documentary style, shot on 35mm, fine film grain, shallow depth of field.
-Not glamorous, not motivational-poster — real, but put together.
+soft gentle features. Nutrition, in a tidy city apartment kitchen at
+morning light — meal prep, a few plants on the windowsill, warm window
+light, soft shadows. Desaturated honest palette: deep ink blacks, warm
+paper ivory, muted olive green, tan. Shot on 35mm, fine film grain,
+shallow depth of field. Real, but put together — not glamorous, not a
+motivational poster.
 ```
 
-### 3.8 A06 — Lily · Mobility (растяжка, дома) · 3:4
+### 3.8 A06 — Lily · Mobility · 3:4
+
+**Лёгкий промт:**
 
 ```
 Editorial fitness-journal photograph, vertical 3:4. A well-groomed woman,
 31 years old, of Mediterranean type — olive skin, long dark hair, a
-graceful lean build. In a tidy minimalist home studio at dawn, mid-yoga
-stretch on a clean mat — seated forward fold, spine long and aligned,
-hands on her shins. Eyes closed, serene face with a healthy natural glow,
-no makeup, hair in a neat low ponytail. Fitted charcoal crop top and
-matching dark moss-olive leggings — quality training clothes. Long window
-light from the left, soft warm morning haze, long shadow. Palette of deep
-ink blacks, warm paper ivory, muted olive green and tan — desaturated,
-honest, quiet. Editorial documentary style, shot on 35mm, fine film grain,
-shallow depth of field. Not glamorous, not motivational-poster — real,
-but put together.
+graceful lean build. Mobility, in a tidy minimalist home studio at dawn —
+clean mat, long window light, soft warm morning haze. Desaturated honest
+palette: deep ink blacks, warm paper ivory, muted olive green, tan —
+quiet. Shot on 35mm, fine film grain, shallow depth of field. Real, but
+put together — not glamorous, not a motivational poster.
 ```
 
 ### 3.9 Колонка Train — T (отдельный типаж, зал) · 16:10
 
+**Лёгкий промт:**
+
 ```
 Editorial fitness-journal photograph, wide 16:10. A well-groomed woman,
 28 years old, of a distinct type — light olive skin, short dark cropped
-hair, a slim athletic frame. In an old-school city gym at dawn, mid
-exercise with a barbell and weight plates on the platform, focused gaze
-down. Skin fresh with a light natural flush, no makeup. Fitted charcoal
-training top and dark moss-olive leggings — quality training clothes.
-Chalk dust, industrial windows, soft golden morning light, long shadows.
-Palette of deep ink blacks, warm paper ivory, muted olive green and tan —
-desaturated, honest. Editorial documentary style, shot on 35mm, fine film
-grain, shallow depth of field. Not glamorous, not motivational-poster —
-real, but put together.
+hair, a slim athletic frame. Training in an old-school city gym at dawn,
+barbell and weight plates, chalk dust, industrial windows, long shadows.
+Desaturated honest palette: deep ink blacks, warm paper ivory, muted olive
+green, tan. Shot on 35mm, fine film grain, shallow depth of field. Real,
+but put together — not glamorous, not a motivational poster.
 ```
 
 ### 3.10 Колонка Fuel — ЕДА (meal-prep bowl) · 16:10
@@ -246,14 +239,11 @@ glossy ad — a real day's prep.
 ```
 Editorial fitness-journal photograph, wide 16:10. A well-groomed woman,
 31 years old, of Mediterranean type — olive skin, long dark hair, graceful
-lean build. On a clean mat in a tidy minimalist home studio at dawn,
-stretching — lying supine, one leg extended up, hands behind the thigh,
-calm serene expression, eyes closed, no makeup, hair loose. Fitted
-charcoal crop top and dark moss-olive leggings — quality training clothes.
-Long window light, soft warm morning haze. Palette of deep ink blacks,
-warm paper ivory, muted olive green and tan — desaturated, honest, quiet.
-Editorial documentary style, shot on 35mm, fine film grain, shallow depth
-of field. Not glamorous, not motivational-poster — real, but put together.
+lean build. Mobility and recovery, on a clean mat in a tidy minimalist home
+studio at dawn — long window light, soft warm morning haze. Desaturated
+honest palette: deep ink blacks, warm paper ivory, muted olive green, tan
+— quiet. Shot on 35mm, fine film grain, shallow depth of field. Real, but
+put together — not glamorous, not a motivational poster.
 ```
 
 ---
@@ -305,5 +295,8 @@ messy table, studio lighting, heavy shadows
   (коммит `3724685`)
 - `athlete-sofia.webp` — заменён, нативный 3:4 (коммит `d425beb`)
 - **Все остальные (cover, og-image, emma, lily, column-train, column-fuel)
-  — готовятся к полной перегенерации по промтам выше (разные типажи,
-  возраст 26–32)**
+   — готовятся к полной перегенерации по промтам выше (разные типажи,
+   возраст 26–32)**
+- `og-image.png` — собран как составная карточка из hero (Pillow, 1280×640),
+  источник `cover.webp`; мета `og:image:width/height` в `index.html`
+  обновлена на 1280/640
