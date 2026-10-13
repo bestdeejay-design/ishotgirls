@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://bestdeejay-design.github.io/ishotgirls/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://bestdeejay-design.github.io/ishotgirls/img/hero-main.webp</image:loc>
+      <image:title>ISHOTGIRLS — Field Notes, выпуск №01</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bestdeejay-design.github.io/ishotgirls/img/roster-01-anna.webp</image:loc>
+      <image:title>Анна — профиль месяца, сила</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bestdeejay-design.github.io/ishotgirls/img/feature-wide.webp</image:loc>
+      <image:title>Зал на рассвете — кадр из выпуска</image:title>
+    </image:image>
+  </url>
+</urlset>

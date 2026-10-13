@@ -1,263 +1,982 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="ru" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ISHOT — The Training Journal · Issue №01</title>
-<meta name="description" content="A journal of real training, not filtered motivation. The roster, the columns, the gear. Streaks, PRs, session times.">
-<meta property="og:title" content="ISHOT — The Training Journal">
-<meta property="og:description" content="Real training. Not filtered motivation. Issue №01.">
-<meta property="og:image" content="https://bestdeejay-design.github.io/ishotgirls/img/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:url" content="https://bestdeejay-design.github.io/ishotgirls/">
+<title>ISHOTGIRLS — Field Notes · Выпуск №01 · Дневник реальных тренировок</title>
+<meta name="description" content="Кураторский дневник реальных тренировок: дисциплина, тоннаж, сон, еда. Без отфильтрованной мотивации — только то, что можно измерить и повторить.">
+<meta name="theme-color" content="#0A0A09" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F4F0E6" media="(prefers-color-scheme: light)">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="ISHOTGIRLS">
+<meta property="og:title" content="ISHOTGIRLS — Field Notes · Дневник реальных тренировок">
+<meta property="og:description" content="Реальные тренировки, а не отфильтрованная мотивация. Ростер, колонки, дневник. Выпуск №01.">
+<meta property="og:image" content="https://bestdeejay-design.github.io/ishotgirls/img/og-image.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Обложка выпуска №01: реальные тренировки, а не отфильтрованная мотивация">
+<meta property="og:url" content="https://bestdeejay-design.github.io/ishotgirls/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="robots" content="index,follow">
+<meta name="twitter:title" content="ISHOTGIRLS — Field Notes">
+<meta name="twitter:description" content="Реальные тренировки, а не отфильтрованная мотивация.">
+<meta name="twitter:image" content="https://bestdeejay-design.github.io/ishotgirls/img/og-image.png">
 <link rel="canonical" href="https://bestdeejay-design.github.io/ishotgirls/">
-<link rel="sitemap" href="/ishotgirls/sitemap.xml">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 fill=%22%231B1B18%22/><text x=%2232%22 y=%2246%22 font-size=%2240%22 font-family=%22Georgia%22 fill=%22%232E4A33%22 text-anchor=%22middle%22>№</text></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Lora:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Periodical","name":"ISHOT — The Training Journal","url":"https://bestdeejay-design.github.io/ishotgirls/","description":"Real training. Not filtered motivation."}</script>
+<meta name="robots" content="index,follow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 fill=%22%230A0A09%22/><rect x=%224%22 y=%224%22 width=%2256%22 height=%2256%22 fill=%22none%22 stroke=%22%237C8B5E%22 stroke-width=%222%22/><text x=%2232%22 y=%2245%22 font-size=%2234%22 font-family=%22Georgia,serif%22 font-style=%22italic%22 fill=%22%23EFE9DD%22 text-anchor=%22middle%22>i</text></svg>">
+<link rel="preload" href="assets/fonts/instrument-serif-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/hero-main.webp" as="image" type="image/webp">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Periodical","name":"ISHOTGIRLS — Field Notes","alternateName":"Дневник реальных тренировок","url":"https://bestdeejay-design.github.io/ishotgirls/","description":"Кураторский дневник реальных тренировок. Выпуск №01.","inLanguage":"ru","issn":"0000-0001","publisher":{"@type":"Organization","name":"ISHOTGIRLS"},"hasPart":[{"@type":"CreativeWorkSeries","name":"Ростер"},{"@type":"CreativeWorkSeries","name":"Колонки: Train · Fuel · Recover"}]}
+</script>
 <style>
+/* ============================================================
+   ISHOTGIRLS — design system v2 ("Field Notes")
+   ink / bone / olive + tan.  Instrument Serif · Archivo · JetBrains Mono
+   ============================================================ */
+@font-face{font-family:"Archivo";src:url(assets/fonts/archivo-latin.woff2) format("woff2-variations");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Archivo X";src:url(assets/fonts/archivo-latin-expanded.woff2) format("woff2-variations");font-weight:100 900;font-stretch:100% 125%;font-style:normal;font-display:swap}
+@font-face{font-family:"Instrument Serif";src:url(assets/fonts/instrument-serif-latin.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Instrument Serif";src:url(assets/fonts/instrument-serif-latin-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url(assets/fonts/jetbrains-mono-latin.woff2) format("woff2-variations");font-weight:100 800;font-style:normal;font-display:swap}
+
 :root{
-  --paper:#F2EEE5; --ink:#1B1B18; --ink-2:#26261F;
-  --green:#2E4A33; --green-dim:#6C7F6C; --tan:#B7A98A;
-  --strike:#8C2F2F; --muted-lt:#6E6248; --cap-fg:#F2EEE5; --cap-dim:#C9BE9F;
-  --font-d:"Fraunces",Georgia,serif;
-  --font-b:"Lora",Georgia,serif;
-  --font-m:"JetBrains Mono",ui-monospace,monospace;
-  --bg:var(--ink); --fg:var(--paper); --muted:var(--tan); --accent:var(--green-dim);
-  --line:color-mix(in srgb,var(--fg) 16%,transparent);
+  /* palette -------------------------------------------------- */
+  --ink:#0A0A09; --ink-2:#101010; --ink-3:#161614; --ink-4:#1E1E1A;
+  --bone:#EFE9DD; --bone-2:#CFC6B2; --bone-3:#A69E8E;
+  --olive:#7C8B5E; --olive-2:#9BAA78; --olive-deep:#3C4630;
+  --tan:#C3B394; --clay:#8A6A4F;
+  /* semantic (dark = default) -------------------------------- */
+  --bg:var(--ink); --bg-2:var(--ink-2); --bg-3:var(--ink-3);
+  --fg:var(--bone); --fg-2:var(--bone-2); --muted:var(--bone-3);
+  --accent:var(--olive-2); --accent-soft:var(--olive); --on-accent:#0A0A09;
+  --line:color-mix(in srgb,var(--fg) 13%,transparent);
+  --line-2:color-mix(in srgb,var(--fg) 26%,transparent);
+  --scrim:rgba(10,10,9,.55);
+  /* type ----------------------------------------------------- */
+  --sans:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --sans-x:"Archivo X","Archivo",system-ui,sans-serif;
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  /* rhythm --------------------------------------------------- */
+  --pad:clamp(18px,4.2vw,64px);
+  --gap:clamp(16px,2vw,28px);
+  --sec:clamp(64px,9vw,140px);
+  --r:2px;
 }
-[data-theme="light"]{ --bg:var(--paper); --fg:var(--ink); --muted:var(--muted-lt); --accent:var(--green); --line:color-mix(in srgb,var(--fg) 18%,transparent); }
+html[data-theme="light"]{
+  --bg:#F4F0E6; --bg-2:#EDE7DA; --bg-3:#E4DCCB;
+  --fg:#14140F; --fg-2:#3A392F; --muted:#6E6A5C;
+  --accent:#4F5B36; --accent-soft:#6F7F52; --on-accent:#F4F0E6;
+  --line:color-mix(in srgb,#14140F 14%,transparent);
+  --line-2:color-mix(in srgb,#14140F 28%,transparent);
+  --scrim:rgba(244,240,230,.5);
+}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{font-family:var(--font-b);background:var(--bg);color:var(--fg);line-height:1.7;transition:background .3s,color .3s}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--sans);background:var(--bg);color:var(--fg);
+  font-size:16px;line-height:1.62;font-weight:400;letter-spacing:0;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  transition:background .35s ease,color .35s ease;
+}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
-button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.mono{font-family:var(--font-m);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:1px}
+::selection{background:var(--accent);color:var(--on-accent)}
+.wrap{max-width:1440px;margin:0 auto;padding-inline:var(--pad)}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:var(--pad);top:10px;z-index:99;background:var(--fg);color:var(--bg);padding:10px 16px;font-family:var(--mono);font-size:12px}
 
-/* masthead nav */
-.masthead{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;align-items:center;justify-content:space-between;padding:16px 5vw;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px)}
-.mast{font-family:var(--font-d);font-size:22px;letter-spacing:.18em;font-weight:600}
-.mast i{font-style:italic;color:var(--accent)}
-.issue-tag{font-family:var(--font-m);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-.menu{display:flex;gap:24px;list-style:none}
-.menu a{font-family:var(--font-m);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);transition:color .2s}
-.menu a:hover{color:var(--fg)}
-.actions{display:flex;gap:10px}
-.theme-btn{width:38px;height:38px;border:1px solid var(--line);border-radius:50%;font-size:15px}
-.burger{display:none;width:38px;height:38px;border:1px solid var(--line);border-radius:50%;font-size:15px}
-.mobile-panel{position:fixed;inset:0;z-index:50;background:var(--bg);display:none;flex-direction:column;gap:6px;padding:26px}
-.mobile-panel.open{display:flex}
-.mobile-panel a{font-family:var(--font-d);font-size:34px;padding:10px 4px;border-bottom:1px solid var(--line)}
+/* ---------- primitives ---------- */
+.mono{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;line-height:1.5}
+.mono--sm{font-size:10px;letter-spacing:.2em}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--accent)}
+.eyebrow::before{content:"";width:26px;height:1px;background:currentColor;opacity:.7}
+.display{font-family:var(--serif);font-weight:400;line-height:.95;letter-spacing:-.015em}
+.display em,.it{font-style:italic}
+.lede{color:var(--fg-2);font-size:clamp(15px,1.15vw,18px);max-width:56ch}
+.rule{height:1px;background:var(--line);border:0}
+.hairline{border-top:1px solid var(--line)}
 
-/* cover */
-.cover{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:5vw;padding:140px 5vw 70px;max-width:1400px;margin:0 auto}
-.cover .kicker{margin-bottom:20px}
-.cover h1{font-family:var(--font-d);font-weight:500;font-size:clamp(46px,7vw,104px);line-height:.98;letter-spacing:.002em}
-.cover h1 em{font-style:italic;color:var(--accent)}
-.cover .sub{margin-top:22px;max-width:40ch;color:var(--muted);font-size:17px}
-.stats{display:flex;flex-wrap:wrap;gap:30px;margin-top:32px}
-.stat b{font-family:var(--font-m);font-size:26px;font-weight:600;color:var(--fg)}
-.stat span{display:block;font-family:var(--font-m);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.cta-row{display:flex;gap:14px;margin-top:38px;flex-wrap:wrap}
-.btn{padding:14px 26px;border-radius:2px;font-family:var(--font-m);font-size:12px;letter-spacing:.12em;text-transform:uppercase;transition:transform .15s}
-.btn:hover{transform:translateY(-2px)}
-.btn-solid{background:var(--accent);color:var(--bg)}
-.btn-ghost{border:1px solid var(--line)}
-.cover-fig{position:relative}
-.cover-fig img{aspect-ratio:4/5;object-fit:cover;border-radius:2px}
-.cover-fig .issue-badge{position:absolute;left:-16px;top:-16px;background:var(--green);color:var(--paper);padding:10px 14px;font-family:var(--font-m);font-size:11px;letter-spacing:.12em}
-.cover-fig .rule{position:absolute;bottom:-12px;right:-12px;width:55%;height:55%;border:1.5px solid var(--green);pointer-events:none}
+.btn{
+  --bg-btn:transparent;
+  display:inline-flex;align-items:center;gap:10px;position:relative;
+  padding:14px 22px;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  border:1px solid var(--line-2);border-radius:var(--r);color:var(--fg);background:var(--bg-btn);
+  transition:background .25s ease,color .25s ease,border-color .25s ease,transform .25s ease;
+  overflow:hidden;
+}
+.btn:hover{transform:translateY(-2px);border-color:var(--accent)}
+.btn--solid{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.btn--solid:hover{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn .arw{transition:transform .25s ease}
+.btn:hover .arw{transform:translateX(4px)}
 
-/* sections */
-.section{padding:110px 5vw;max-width:1400px;margin:0 auto}
-.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:44px;padding-bottom:16px;border-bottom:1px solid var(--line)}
-.sec-head h2{font-family:var(--font-d);font-weight:500;font-size:clamp(32px,4.4vw,54px)}
-.sec-head .idx{font-family:var(--font-m);font-size:12px;color:var(--muted);letter-spacing:.12em}
+.sec{padding-block:var(--sec)}
+.sec--tight{padding-block:clamp(44px,6vw,88px)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:var(--gap);align-items:end;padding-bottom:22px;border-bottom:1px solid var(--line-2);margin-bottom:clamp(28px,3.4vw,52px)}
+.sec-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,5.2vw,74px);line-height:.98;letter-spacing:-.02em}
+.sec-head .aside{justify-self:end;text-align:right;color:var(--muted);max-width:34ch}
+@media(max-width:860px){.sec-head{grid-template-columns:1fr}.sec-head .aside{text-align:left;justify-self:start}}
 
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.card{position:relative;overflow:hidden}
-.card img{aspect-ratio:3/4;object-fit:cover;width:100%;transition:transform .4s}
-.card:hover img{transform:scale(1.03)}
-.card .cap{position:absolute;inset:auto 0 0 0;padding:36px 16px 14px;background:linear-gradient(to top,rgba(15,14,12,.85),transparent);color:var(--cap-fg)}
-.card .cap b{font-family:var(--font-d);font-size:21px;font-weight:500;display:block}
-.card .cap span{font-family:var(--font-m);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--cap-dim)}
-.card .no{position:absolute;top:12px;left:12px;background:var(--bg);color:var(--fg);font-family:var(--font-m);font-size:10px;letter-spacing:.1em;padding:5px 8px}
+/* ---------- scroll progress ---------- */
+.progress{position:fixed;inset:0 0 auto 0;height:2px;z-index:80;background:transparent;pointer-events:none}
+.progress i{display:block;height:100%;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:0 50%}
 
-/* columns */
-.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.col{border:1px solid var(--line);border-radius:2px;overflow:hidden}
-.col img{aspect-ratio:16/10;object-fit:cover}
-.col .body{padding:20px 22px 26px}
-.col-t{font-family:var(--font-d);font-size:26px;font-weight:500;margin:8px 0 10px}
-.col .body p{color:var(--muted);font-size:15px}
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:70;background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(16px) saturate(1.25);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1440px;margin:0 auto;padding:12px var(--pad);display:flex;align-items:center;gap:clamp(14px,2.4vw,36px)}
+.brand{display:flex;align-items:center;gap:12px;flex:0 0 auto}
+.brand .mark{width:30px;height:30px;border:1px solid var(--accent);display:grid;place-items:center;font-family:var(--serif);font-style:italic;font-size:19px;color:var(--fg);background:var(--bg-2)}
+.brand b{font-family:var(--sans-x);font-weight:700;font-size:16px;letter-spacing:.14em;font-stretch:110%}
+.brand span{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase;margin-top:1px}
+.nav-links{display:flex;gap:clamp(12px,1.7vw,26px);margin-left:auto;list-style:none}
+.nav-links a{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:6px 0;position:relative;transition:color .2s}
+.nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--accent);transition:right .28s ease}
+.nav-links a:hover{color:var(--fg)}
+.nav-links a:hover::after{right:0}
+.nav-tools{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.icon-btn{width:38px;height:38px;border:1px solid var(--line-2);border-radius:50%;display:grid;place-items:center;color:var(--fg-2);transition:color .2s,border-color .2s,background .2s}
+.icon-btn:hover{color:var(--fg);border-color:var(--accent)}
+.icon-btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.5}
+.burger{display:none}
+@media(max-width:1000px){.nav-links{display:none}.burger{display:grid}}
+.drawer{position:fixed;inset:0;z-index:90;background:var(--bg);padding:22px var(--pad) 40px;display:flex;flex-direction:column;gap:6px;
+  clip-path:inset(0 0 100% 0);transition:clip-path .45s cubic-bezier(.5,0,.2,1);pointer-events:none}
+.drawer[data-open="true"]{clip-path:inset(0 0 0 0);pointer-events:auto}
+.drawer .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+.drawer a.big{font-family:var(--serif);font-size:clamp(30px,8vw,46px);line-height:1.12;padding:12px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.drawer a.big i{font-family:var(--mono);font-size:10px;font-style:normal;color:var(--muted);letter-spacing:.18em}
+.drawer .foot{margin-top:auto;color:var(--muted)}
 
-/* gear index */
-.gear{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line)}
-.gear .g{display:flex;justify-content:space-between;gap:14px;padding:18px 4px;border-bottom:1px solid var(--line);font-family:var(--font-d);font-size:20px}
-.gear .g:nth-child(odd){padding-right:28px}
-.gear .g:nth-child(even){padding-left:28px;border-left:1px solid var(--line)}
-.gear .g i{font-style:normal;font-family:var(--font-m);font-size:11px;color:var(--accent)}
+/* ---------- hero ---------- */
+.hero{padding-block:clamp(34px,5vw,74px) clamp(30px,4vw,58px)}
+.hero-in{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:clamp(28px,4vw,72px);align-items:center}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,7vw,110px);line-height:.92;letter-spacing:-.025em;margin:18px 0 0}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero h1 .small{display:block;font-size:.44em;letter-spacing:.01em;color:var(--fg-2);margin-top:.34em;line-height:1.1}
+.hero .lede{margin-top:26px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:clamp(30px,4vw,52px);border-top:1px solid var(--line);padding-top:18px}
+.hero-stats div{padding-right:16px;border-right:1px solid var(--line)}
+.hero-stats div:last-child{border-right:0}
+.hero-stats b{display:block;font-family:var(--mono);font-weight:600;font-size:clamp(17px,1.9vw,25px);letter-spacing:-.02em;color:var(--fg)}
+.hero-stats span{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+@media(max-width:640px){.hero-stats{grid-template-columns:repeat(2,1fr);gap:18px 0}.hero-stats div:nth-child(2n){border-right:0}}
 
-/* manifesto */
-.manifesto{max-width:900px;margin:0 auto;text-align:center;padding:130px 5vw}
-.manifesto blockquote{font-family:var(--font-d);font-style:italic;font-weight:500;font-size:clamp(28px,4.4vw,54px);line-height:1.2}
-.manifesto blockquote em{color:var(--accent)}
-.manifesto p{margin-top:26px;color:var(--muted);max-width:52ch;margin-left:auto;margin-right:auto}
+.hero-fig{position:relative;isolation:isolate;padding:0 0 26px 26px}
+.hero-fig::before{content:"";position:absolute;top:22px;right:-16px;bottom:-16px;left:22px;border:1px solid color-mix(in srgb,var(--accent) 55%,transparent);z-index:0}
+.hero-fig .shot{position:relative;z-index:1;aspect-ratio:4/5;overflow:hidden;background:var(--bg-3)}
+.hero-fig .shot img{width:100%;height:100%;object-fit:cover;filter:saturate(.95) contrast(1.03)}
+.hero-fig .shot::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,9,.12),transparent 32%,rgba(10,10,9,.28));pointer-events:none}
+.hero-fig .tagline{position:absolute;z-index:2;left:0;top:8px;height:100%;display:flex;align-items:flex-end;padding-bottom:8px;writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;color:var(--muted);letter-spacing:.24em}
+.hero-fig .inset{position:absolute;z-index:3;left:0;bottom:0;width:min(42%,200px);background:var(--bg);padding:8px;box-shadow:0 24px 50px -28px rgba(0,0,0,.7)}
+.hero-fig .inset img{aspect-ratio:1/1;object-fit:cover;width:100%}
+.hero-fig .inset figcaption{margin-top:8px}
+.hero-badge{position:absolute;z-index:4;right:14px;top:14px;background:var(--accent);color:var(--on-accent);padding:8px 12px;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+@media(max-width:1000px){
+  .hero-in{grid-template-columns:1fr}
+  .hero-fig{max-width:520px;margin-top:10px}
+  .hero-fig .tagline{display:none}
+}
 
-.to-top{position:fixed;right:22px;bottom:22px;z-index:60;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:blur(8px);color:var(--fg);font-size:18px;line-height:1;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s,transform .25s,visibility .25s}
+/* ---------- ticker ---------- */
+.ticker{border-block:1px solid var(--line-2);background:var(--bg-2);overflow:hidden;padding:13px 0}
+.ticker-track{display:flex;gap:44px;width:max-content;animation:marq 46s linear infinite}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker span{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-2);display:flex;align-items:center;gap:44px;white-space:nowrap}
+.ticker span::after{content:"";width:5px;height:5px;background:var(--accent);border-radius:50%}
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- manifesto ---------- */
+.manifesto-block{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(24px,4vw,80px);align-items:start}
+.statement{font-family:var(--serif);font-size:clamp(28px,4.1vw,58px);line-height:1.06;letter-spacing:-.015em}
+.statement em{font-style:italic;color:var(--accent)}
+.statement s{color:var(--muted);text-decoration-thickness:1px;text-decoration-color:color-mix(in srgb,var(--muted) 60%,transparent)}
+@media(max-width:900px){.manifesto-block{grid-template-columns:1fr}}
+.pull{border-left:1px solid var(--line-2);padding-left:22px;color:var(--fg-2)}
+.pull cite{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:12px;font-style:normal}
+
+.principles{margin-top:clamp(40px,5vw,72px);border-top:1px solid var(--line-2)}
+.principle{display:grid;grid-template-columns:74px minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(14px,2.4vw,40px);padding:24px 8px;border-bottom:1px solid var(--line);align-items:baseline;position:relative;transition:background .3s ease,padding .3s ease}
+.principle:hover{background:var(--bg-2);padding-inline:16px}
+.principle .no{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.16em}
+.principle h3{font-family:var(--serif);font-weight:400;font-size:clamp(21px,2.4vw,34px);line-height:1.1}
+.principle p{color:var(--muted);font-size:15px;max-width:52ch}
+@media(max-width:760px){.principle{grid-template-columns:48px 1fr}.principle p{grid-column:2}}
+
+/* ---------- format / diary ---------- */
+.format{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.86fr);gap:clamp(30px,5vw,84px);align-items:center}
+@media(max-width:960px){.format{grid-template-columns:1fr}}
+.steps{list-style:none;border-top:1px solid var(--line-2);margin-top:26px}
+.steps li{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}
+.steps .n{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.16em;padding-top:5px}
+.steps h3{font-family:var(--sans);font-weight:600;font-size:17px;letter-spacing:-.01em;margin-bottom:5px}
+.steps p{color:var(--muted);font-size:14.5px;max-width:46ch}
+
+/* phone mock */
+.phone-shell{position:relative;justify-self:center;width:min(100%,322px)}
+.phone{position:relative;border:1px solid var(--line-2);background:var(--bg-3);border-radius:32px;padding:9px;box-shadow:0 40px 80px -40px rgba(0,0,0,.75)}
+.phone .screen{background:var(--bg-2);border-radius:24px;overflow:hidden;border:1px solid var(--line)}
+.phone .notch{position:absolute;top:16px;left:50%;transform:translateX(-50%);width:74px;height:5px;border-radius:3px;background:var(--line-2);z-index:2}
+.ph-top{display:flex;align-items:center;justify-content:space-between;padding:22px 16px 12px;border-bottom:1px solid var(--line)}
+.ph-cover{position:relative;height:190px;overflow:hidden}
+.ph-cover img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.ph-cover .ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,9,.15),rgba(10,10,9,.85));display:flex;flex-direction:column;justify-content:flex-end;padding:14px 16px;color:var(--bone)}
+.ph-row{display:flex;justify-content:space-between;align-items:center;padding:11px 16px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--fg-2)}
+.ph-row b{color:var(--fg);font-weight:600}
+.ph-row .ok{color:var(--accent)}
+.ph-bar{height:4px;background:var(--line);margin:0 16px;position:relative;overflow:hidden}
+.ph-bar i{position:absolute;inset:0 auto 0 0;background:var(--accent);width:78%}
+.ph-foot{padding:14px 16px 18px;display:flex;justify-content:space-between;align-items:center}
+.phone-note{position:absolute;right:-14px;bottom:44px;background:var(--bg);border:1px solid var(--line-2);padding:12px 14px;max-width:190px;transform:rotate(-2.4deg)}
+@media(max-width:420px){.phone-note{right:0;bottom:-22px;max-width:170px;transform:none}}
+
+/* ---------- roster ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.chip{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;padding:9px 14px;border:1px solid var(--line);border-radius:999px;color:var(--muted);transition:all .22s ease}
+.chip:hover{color:var(--fg);border-color:var(--line-2)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.chip i{font-style:normal;opacity:.6;margin-left:6px}
+
+.roster{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(12px,1.5vw,22px)}
+.card{grid-column:span 2}
+.card{position:relative;border:1px solid var(--line);background:var(--bg-2);overflow:hidden;transition:border-color .3s ease,transform .4s ease,opacity .35s ease}
+.card:hover{border-color:var(--line-2);transform:translateY(-3px)}
+.card[hidden]{display:none}
+.card .media{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--bg-3)}
+.card .media img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .5s ease;filter:saturate(.96)}
+.card:hover .media img{transform:scale(1.045)}
+.card .media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(10,10,9,.72));opacity:.85;transition:opacity .4s}
+.card .idx{position:absolute;z-index:2;top:11px;left:11px;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;padding:5px 8px;background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(6px);color:var(--fg);border:1px solid var(--line)}
+.card .disc{position:absolute;z-index:2;top:11px;right:11px;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;color:var(--bone)}
+.card .id{position:absolute;z-index:2;left:14px;right:14px;bottom:12px;color:var(--bone)}
+.card .id b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(23px,2.3vw,31px);line-height:1;letter-spacing:-.01em}
+.card .id span{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--bone-2);margin-top:5px}
+.card .body{padding:14px 15px 16px}
+.card .body p{color:var(--muted);font-size:14px;min-height:2.9em}
+.card .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+.card .stats b{display:block;font-family:var(--mono);font-size:13px;font-weight:600;color:var(--fg)}
+.card .stats span{display:block;font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.card .go{display:flex;align-items:center;justify-content:space-between;margin-top:14px;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.card .go .arw{transition:transform .3s}
+.card:hover .go .arw{transform:translateX(5px)}
+/* a plate whose frame is still in the lab — deliberate editorial placeholder */
+.media--pending{background:repeating-linear-gradient(135deg,transparent 0 11px,color-mix(in srgb,var(--fg) 7%,transparent) 11px 12px),var(--bg-3);display:grid;place-items:center;padding:22px;text-align:center}
+.media--pending::after{background:none!important}
+.media--pending .note{color:var(--muted);max-width:24ch;position:relative;z-index:2}
+.media--pending .note b{display:block;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(30px,3vw,44px);line-height:1;color:var(--fg);opacity:.32;margin-bottom:12px}
+/* horizontal card: portrait plate on the left, numbers on the right */
+.card--row{grid-column:span 3;display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr)}
+.card--row .media{aspect-ratio:3/4;height:100%;min-height:300px}
+.card--row .media::after{background:linear-gradient(180deg,rgba(10,10,9,.25),rgba(10,10,9,.55))}
+.card--row .body{align-self:center;padding:clamp(16px,2vw,26px)}
+.card--row .body p{min-height:0;max-width:44ch}
+.card--row .id{position:static;color:inherit;margin-bottom:6px}
+.card--row .id b{color:var(--fg);font-size:clamp(24px,2.1vw,32px)}
+.card--row .id span{color:var(--muted)}
+.card--row .disc{display:none}
+/* feature profile — the issue's "athlete of the month" plate */
+.feature{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(20px,3.4vw,64px);align-items:center;border:1px solid var(--line);background:var(--bg-2);padding:clamp(14px,2vw,26px);margin-bottom:clamp(16px,2.4vw,30px)}
+.feature .fmedia{position:relative;isolation:isolate;padding:0 14px 14px 0}
+.feature .fmedia::before{content:"";position:absolute;top:14px;right:0;bottom:0;left:14px;border:1px solid color-mix(in srgb,var(--accent) 55%,transparent)}
+.feature .fmedia img{position:relative;z-index:1;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 20%;filter:saturate(.96)}
+.feature .fbody{padding:clamp(4px,1vw,18px) clamp(4px,1vw,18px) clamp(4px,1vw,18px) 0}
+.feature h3{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.6vw,66px);line-height:.98;letter-spacing:-.02em;margin:12px 0 6px}
+.feature .fmeta{color:var(--muted);margin-bottom:18px}
+.feature .fquote{font-family:var(--serif);font-size:clamp(18px,1.9vw,25px);line-height:1.3;font-style:italic;border-left:1px solid var(--line-2);padding-left:16px;margin:18px 0;max-width:48ch}
+.feature .fstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;border-top:1px solid var(--line);padding-top:16px;margin-top:20px}
+.feature .fstats b{display:block;font-family:var(--mono);font-size:clamp(15px,1.6vw,20px);font-weight:600}
+.feature .fstats span{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+@media(max-width:860px){.feature{grid-template-columns:1fr}.feature .fmedia{max-width:420px}}
+
+@media(max-width:1050px){
+  .roster{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .card,.card--row{grid-column:span 1}
+}
+@media(max-width:620px){
+  .roster{grid-template-columns:1fr}
+  .card--row{grid-template-columns:1fr}
+  .card--row .media{min-height:300px}
+}
+
+/* ---------- band (full-bleed) ---------- */
+.band{position:relative;isolation:isolate;overflow:hidden;border-block:1px solid var(--line-2)}
+.band img{width:100%;height:clamp(280px,44vw,540px);object-fit:cover;filter:saturate(.9) contrast(1.04)}
+.band .ov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,9,.88) 0%,rgba(10,10,9,.5) 45%,rgba(10,10,9,.15) 100%);display:flex;align-items:center}
+html[data-theme="light"] .band .ov{background:linear-gradient(90deg,rgba(10,10,9,.82) 0%,rgba(10,10,9,.45) 50%,rgba(10,10,9,.1) 100%)}
+.band .in{max-width:1440px;margin:0 auto;padding:0 var(--pad);color:var(--bone);width:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:var(--gap);align-items:center}
+.band h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.6vw,64px);line-height:1;letter-spacing:-.02em;max-width:18ch}
+.band h2 em{font-style:italic;color:var(--olive-2)}
+.band .meta{color:color-mix(in srgb,var(--bone) 78%,transparent);font-size:15px;max-width:40ch}
+.band .meta b{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--olive-2);margin-bottom:12px}
+@media(max-width:860px){.band .in{grid-template-columns:1fr}}
+
+/* ---------- columns ---------- */
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,1.8vw,26px)}
+.col{border:1px solid var(--line);background:var(--bg-2);display:flex;flex-direction:column;transition:border-color .3s,transform .4s}
+.col:hover{border-color:var(--line-2);transform:translateY(-3px)}
+.col .media{aspect-ratio:16/10;overflow:hidden;position:relative;background:var(--bg-3)}
+.col .media img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.col:hover .media img{transform:scale(1.05)}
+.col .body{padding:clamp(18px,2vw,26px);display:flex;flex-direction:column;flex:1}
+.col .kicker{display:flex;justify-content:space-between;align-items:baseline}
+.col h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,2.6vw,38px);line-height:1;margin:12px 0 10px}
+.col p{color:var(--muted);font-size:14.5px}
+.col ul{list-style:none;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.col li{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-2);padding:7px 0;display:flex;gap:10px;align-items:baseline}
+.col li::before{content:"";width:14px;height:1px;background:var(--accent);flex:0 0 auto;transform:translateY(-4px)}
+@media(max-width:900px){.cols{grid-template-columns:1fr}}
+
+/* ---------- gear ---------- */
+.gear-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.8fr);gap:clamp(24px,4vw,72px);align-items:start}
+@media(max-width:900px){.gear-grid{grid-template-columns:1fr}}
+.gear-list{border-top:1px solid var(--line-2)}
+.gear-row{display:grid;grid-template-columns:56px minmax(0,1fr) minmax(0,1.1fr) 74px;gap:16px;align-items:center;padding:18px 10px;border-bottom:1px solid var(--line);transition:background .25s ease,padding .25s ease}
+.gear-row:hover{background:var(--bg-2);padding-inline:18px}
+.gear-row .g-idx{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.12em}
+.gear-row .g-name{font-family:var(--sans);font-weight:600;font-size:clamp(17px,1.6vw,21px);letter-spacing:-.01em}
+.gear-row .g-note{color:var(--muted);font-size:14px}
+.gear-row .g-tag{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);text-align:right}
+@media(max-width:700px){.gear-row{grid-template-columns:40px 1fr 60px}.gear-row .g-note{display:none}}
+.margin-notes li{list-style:none;padding:16px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:14px;color:var(--muted);font-size:14px}
+.margin-notes b{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:.16em;padding-top:4px}
+
+/* ---------- log (diary sample) ---------- */
+.log{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,4vw,64px);align-items:center}
+@media(max-width:900px){.log{grid-template-columns:1fr}}
+.log-card{border:1px solid var(--line-2);background:var(--bg-2);padding:clamp(18px,2.4vw,30px)}
+.log-card .lhead{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.log-card .lhead b{font-family:var(--sans);font-weight:600;font-size:18px}
+.log-table{width:100%;border-collapse:collapse;margin-top:6px}
+.log-table th,.log-table td{text-align:left;padding:12px 6px;border-bottom:1px solid var(--line);font-size:14px}
+.log-table th{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.log-table td:first-child{font-family:var(--mono);font-size:11.5px;color:var(--fg-2);letter-spacing:.06em}
+.log-table td.num{font-family:var(--mono);font-size:14px;font-weight:600}
+.log-table .up{color:var(--accent)}
+.log-note{margin-top:16px;color:var(--muted);font-size:14px;display:flex;gap:12px;align-items:flex-start}
+.log-note::before{content:"✳";color:var(--accent)}
+
+/* ---------- join ---------- */
+.join{border:1px solid var(--line-2);background:var(--bg-2);padding:clamp(26px,4.4vw,70px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(22px,4vw,64px);align-items:end;position:relative;overflow:hidden}
+.join::after{content:"";position:absolute;right:-120px;top:-120px;width:340px;height:340px;border:1px solid color-mix(in srgb,var(--accent) 40%,transparent);border-radius:50%;pointer-events:none}
+.join h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.4vw,62px);line-height:1;letter-spacing:-.02em}
+.join h2 em{font-style:italic;color:var(--accent)}
+.join .actions{display:flex;flex-direction:column;gap:12px;justify-self:end;width:min(100%,300px)}
+@media(max-width:900px){.join{grid-template-columns:1fr}.join .actions{justify-self:stretch;width:100%}}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line-2);margin-top:var(--sec);background:var(--bg-2)}
+.foot-in{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,.7fr));gap:clamp(22px,3vw,48px);padding-block:clamp(38px,5vw,68px)}
+@media(max-width:900px){.foot-in{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.foot-in{grid-template-columns:1fr}}
+.foot-in h4{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.foot-in ul{list-style:none;display:grid;gap:9px}
+.foot-in a{color:var(--fg-2);font-size:14.5px;transition:color .2s}
+.foot-in a:hover{color:var(--accent)}
+.foot-brand b{font-family:var(--sans-x);font-weight:700;letter-spacing:.14em;font-size:18px;display:block;margin-bottom:12px}
+.foot-brand p{color:var(--muted);font-size:14px;max-width:42ch}
+.foot-bar{border-top:1px solid var(--line);padding:18px 0;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;color:var(--muted)}
+
+.to-top{position:fixed;right:18px;bottom:18px;z-index:75;width:46px;height:46px;border-radius:50%;border:1px solid var(--line-2);background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px);display:grid;place-items:center;color:var(--fg);opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .3s,transform .3s,visibility .3s,background .25s,color .25s}
 .to-top.show{opacity:1;visibility:visible;transform:none}
-.to-top:hover{background:var(--accent);color:var(--bg)}
+.to-top:hover{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.to-top svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6}
 
-/* footer */
-
-footer{border-top:1px solid var(--line);padding:42px 5vw}
-.foot{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center;max-width:1400px;margin:0 auto;font-family:var(--font-m);font-size:11px;letter-spacing:.08em;color:var(--muted)}
-.foot a{color:var(--accent)}
-
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
-@media (max-width:1000px){.cover{grid-template-columns:1fr;padding-top:120px;gap:44px}.cover-fig{max-width:480px}.grid3,.grid4,.cols{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:960px){.menu{display:none}.burger{display:block}}
-@media (max-width:620px){.grid3,.grid4,.cols{grid-template-columns:1fr}.gear{grid-template-columns:1fr}.gear .g:nth-child(even){padding-left:4px;border-left:0}}
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .rv{opacity:1;transform:none}
+  .ticker-track{animation:none}
+  html{scroll-behavior:auto}
+}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
 </style>
 </head>
 <body>
-
-<header class="masthead">
-  <div style="display:flex;align-items:center;gap:14px">
-    <a class="mast" href="#cover" aria-label="Back to top">ISHOT <i>№01</i></a>
-    <span class="issue-tag">The Training Journal</span>
-  </div>
-  <ul class="menu">
-    <li><a href="#roster">Roster</a></li>
-    <li><a href="#columns">Columns</a></li>
-    <li><a href="#gear">Gear</a></li>
-    <li><a href="#manifesto">Manifesto</a></li>
-  </ul>
-  <div class="actions">
-    <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">☾</button>
-    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+<a class="skip" href="#main">Перейти к содержимому</a>
+<div class="progress" aria-hidden="true"><i id="bar"></i></div>
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="ISHOTGIRLS — наверх">
+      <span class="mark" aria-hidden="true">i</span>
+      <span>
+        <b>ISHOTGIRLS</b>
+        <span>Field Notes · №01</span>
+      </span>
+    </a>
+    <nav aria-label="Основная навигация">
+      <ul class="nav-links">
+        <li><a href="#manifesto">Манифест</a></li>
+        <li><a href="#format">Формат</a></li>
+        <li><a href="#roster">Ростер</a></li>
+        <li><a href="#columns">Колонки</a></li>
+        <li><a href="#gear">Экипировка</a></li>
+      </ul>
+    </nav>
+    <div class="nav-tools">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Переключить тему" title="Светлая / тёмная тема">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path id="themeIcon" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a class="btn btn--solid" href="#roster" style="display:none" data-desktop-cta>Читать выпуск <span class="arw" aria-hidden="true">→</span></a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+    </div>
   </div>
 </header>
 
-<div class="mobile-panel" id="mobilePanel">
-  <a href="#roster">The Roster</a>
-  <a href="#columns">The Columns</a>
-  <a href="#gear">The Gear Index</a>
-  <a href="#manifesto">The Manifesto</a>
+<div class="drawer" id="drawer" data-open="false" aria-hidden="true">
+  <div class="top">
+    <span class="mono" style="color:var(--muted)">Меню</span>
+    <button class="icon-btn" id="drawerClose" type="button" aria-label="Закрыть меню">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <a class="big" href="#manifesto" data-close>Манифест <i>01</i></a>
+  <a class="big" href="#format" data-close>Формат <i>02</i></a>
+  <a class="big" href="#roster" data-close>Ростер <i>03</i></a>
+  <a class="big" href="#columns" data-close>Колонки <i>04</i></a>
+  <a class="big" href="#gear" data-close>Экипировка <i>05</i></a>
+  <div class="foot">
+    <p class="mono">@ishotgirls · @ishotstars</p>
+  </div>
 </div>
 
-<section class="cover" id="cover">
-  <div>
-    <p class="kicker mono">Issue №01 — Unfiltered · 47 athletes · 214 transformations</p>
-    <h1>The training<br><em>behind the grid.</em></h1>
-    <p class="sub">Not filtered motivation. Real sessions, real numbers: streaks kept, PRs logged, meals prepped, rest taken. Follow the roster, run the columns, keep your streak.</p>
-    <div class="stats">
-      <div class="stat"><b>47</b><span>Athletes on the roster</span></div>
-      <div class="stat"><b>214</b><span>Transformations / month</span></div>
-      <div class="stat"><b>12 480</b><span>Workouts logged</span></div>
+<main id="main">
+  <span id="top"></span>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero wrap">
+    <div class="hero-in">
+      <div>
+        <p class="eyebrow mono rv">Field Notes · выпуск №01 — обновляется ежедневно</p>
+        <h1 class="display rv" style="--d:60ms">Real training,<br><em>not filtered motivation.</em>
+          <span class="small">Дневник дисциплины: тоннаж, сон, еда и 47 человек, которые не пропускают.</span>
+        </h1>
+        <p class="lede rv" style="--d:120ms">Мы не продаём мотивацию — мы ведём протокол. Каждая сессия записана: вес на штанге, время под нагрузкой, качество сна, приёмы пищи. То, что нельзя измерить, сюда не попадает.</p>
+        <div class="hero-cta rv" style="--d:180ms">
+          <a class="btn btn--solid" href="#roster">Смотреть ростер <span class="arw" aria-hidden="true">→</span></a>
+          <a class="btn" href="#format">Как это работает</a>
+        </div>
+        <div class="hero-stats rv" style="--d:240ms">
+          <div><b>47</b><span>атлеток в ростере</span></div>
+          <div><b>12 480</b><span>записанных сессий</span></div>
+          <div><b>214</b><span>трансформаций в месяц</span></div>
+          <div><b>87</b><span>медианный стрик, дней</span></div>
+        </div>
+      </div>
+
+      <figure class="hero-fig rv" style="--d:140ms">
+        <span class="hero-badge">Выпуск №01</span>
+        <span class="tagline mono" aria-hidden="true">снято на 35 мм · без ретуши</span>
+        <div class="shot">
+          <img src="img/hero-main.webp" width="900" height="1125" alt="Спортсменка в индустриальном зале на рассвете держит штангу на плечах — обложка выпуска №01" fetchpriority="high" decoding="async">
+        </div>
+        <figure class="inset">
+          <img src="img/hero-inset.webp" width="520" height="520" alt="Крупный план: меловые ладони на грифе штанги" loading="lazy" decoding="async">
+          <figcaption class="mono mono--sm" style="color:var(--muted)">Chalk · 06:12 · сессия №4</figcaption>
+        </figure>
+      </figure>
     </div>
-    <div class="cta-row">
-      <a class="btn btn-solid" href="#roster">Read the roster</a>
-      <a class="btn btn-ghost" href="#columns">Turn the columns</a>
+  </section>
+
+  <!-- ============ TICKER ============ -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Без фильтров</span><span>Тоннаж &gt; мотивация</span><span>Сон — часть программы</span><span>Прогресс измеряется</span><span>47 атлеток</span><span>Дисциплина &gt; настроение</span><span>Выпуск №01</span><span>Проверено в понедельник</span>
+      <span>Без фильтров</span><span>Тоннаж &gt; мотивация</span><span>Сон — часть программы</span><span>Прогресс измеряется</span><span>47 атлеток</span><span>Дисциплина &gt; настроение</span><span>Выпуск №01</span><span>Проверено в понедельник</span>
     </div>
   </div>
-  <figure class="cover-fig">
-    <span class="issue-badge mono">Issue №01</span>
-    <img src="img/cover.webp" alt="An athlete training with a barbell — the cover of Issue №01" width="512" height="512">
-    <span class="rule" aria-hidden="true"></span>
-  </figure>
-</section>
 
-<section class="section" id="roster">
-  <div class="sec-head">
-    <h2>The roster</h2>
-    <span class="idx">01 — Athletes</span>
-  </div>
-  <div class="grid3">
-    <figure class="card"><span class="no mono">A01</span><img src="img/athlete-anna.webp" alt="Anna — strength training session" width="768" height="1024"><figcaption class="cap"><b>Anna</b><span>@ishot_anna · Strength</span></figcaption></figure>
-    <figure class="card"><span class="no mono">A02</span><img src="img/athlete-maria.webp" alt="Maria — deadlift, powerlifting" width="768" height="1024"><figcaption class="cap"><b>Maria</b><span>@ishot_maria · Powerlifting</span></figcaption></figure>
-    <figure class="card"><span class="no mono">A03</span><img src="img/athlete-sofia.webp" alt="Sofia — calisthenics pull up" width="768" height="1024"><figcaption class="cap"><b>Sofia</b><span>@ishot_sofia · Calisthenics</span></figcaption></figure>
-    <figure class="card"><span class="no mono">A04</span><img src="img/athlete-olivia-v2.webp" alt="Olivia — morning run, city" width="768" height="1024"><figcaption class="cap"><b>Olivia</b><span>@ishot_olivia · Running</span></figcaption></figure>
-    <figure class="card"><span class="no mono">A05</span><img src="img/athlete-emma.webp" alt="Emma — nutrition, meal prep" width="512" height="512"><figcaption class="cap"><b>Emma</b><span>@ishot_emma · Nutrition</span></figcaption></figure>
-    <figure class="card"><span class="no mono">A06</span><img src="img/athlete-lily-v5.webp" alt="Lily — mobility and stretching" width="512" height="512"><figcaption class="cap"><b>Lily</b><span>@ishot_lily · Mobility</span></figcaption></figure>
-  </div>
-</section>
+  <!-- ============ MANIFESTO ============ -->
+  <section class="sec wrap" id="manifesto">
+    <div class="sec-head">
+      <h2 class="rv">Мы показываем тренировку,<br>а не результат в свете софитов.</h2>
+      <p class="aside mono rv" style="--d:80ms">01 — Манифест<br><span style="letter-spacing:.02em;text-transform:none;font-size:13px;line-height:1.6;display:block;margin-top:10px">Никаких постеров, стоковых фраз и «до/после». Только то, что повторяется в понедельник утром.</span></p>
+    </div>
 
-<section class="section" id="columns">
-  <div class="sec-head">
-    <h2>The columns</h2>
-    <span class="idx">02 — Train · Fuel · Recover</span>
-  </div>
-  <div class="cols">
-    <article class="col"><img src="img/column-train.webp" alt="Train — barbell and weights in the gym" width="512" height="512"><div class="body"><span class="mono">Column 01</span><div class="col-t">Train</div><p>Split programs and warm-ups straight from the roster's coaches. What they actually run, not what they post.</p></div></article>
-    <article class="col"><img src="img/column-fuel.webp" alt="Fuel — meal prep bowl with fresh ingredients" width="512" height="512"><div class="body"><span class="mono">Column 02</span><div class="col-t">Fuel</div><p>Meal plans that fit a real day — no 3000-calorie smoothies. Prep once, eat all week.</p></div></article>
-    <article class="col"><img src="img/column-recover.webp" alt="Recover — stretching on a mat, calm" width="512" height="320"><div class="body"><span class="mono">Column 03</span><div class="col-t">Recover</div><p>Sleep, deloads and mobility days. The part nobody posts — and the part that wins.</p></div></article>
-  </div>
-</section>
+    <div class="manifesto-block">
+      <p class="statement rv">Лента <s>отфильтрованной мотивации</s> превращается в дневник <em>реальных сессий</em>: кто-то тянет 142 кг, кто-то просто вышел на 4 км. Обе записи весят одинаково.</p>
+      <blockquote class="pull rv" style="--d:100ms">
+        <p style="font-family:var(--serif);font-size:21px;line-height:1.35;color:var(--fg)">«Форма — побочный эффект. Главный продукт — привычка, которую видно в календаре.»</p>
+        <cite>@ishotgirls · поле 12</cite>
+      </blockquote>
+    </div>
 
-<section class="section" id="gear">
-  <div class="sec-head">
-    <h2>The gear index</h2>
-    <span class="idx">03 — Worn by the roster</span>
-  </div>
-  <div class="gear">
-    <div class="g"><span>Nike</span><i>G01</i></div>
-    <div class="g"><span>Adidas</span><i>G02</i></div>
-    <div class="g"><span>Lululemon</span><i>G03</i></div>
-    <div class="g"><span>Gymshark</span><i>G04</i></div>
-    <div class="g"><span>Puma</span><i>G05</i></div>
-    <div class="g"><span>Under Armour</span><i>G06</i></div>
-    <div class="g"><span>Alo Yoga</span><i>G07</i></div>
-    <div class="g"><span>Reebok</span><i>G08</i></div>
-  </div>
-</section>
+    <div class="principles">
+      <article class="principle rv"><span class="no">01</span><h3>Реальное важнее идеального</h3><p>Кадр без ретуши, запись без пропусков. Идеальных недель не существует — существуют продолженные.</p></article>
+      <article class="principle rv" style="--d:60ms"><span class="no">02</span><h3>Рутина важнее настроения</h3><p>Мы не ждём вдохновения. Сессия стоит в календаре так же жёстко, как встреча с клиентом.</p></article>
+      <article class="principle rv" style="--d:120ms"><span class="no">03</span><h3>Прогресс должен измеряться</h3><p>Тоннаж, повторы, сон, шаги. Если это нельзя назвать числом — это не попадает в дневник.</p></article>
+      <article class="principle rv" style="--d:180ms"><span class="no">04</span><h3>Тишина громче рекламы</h3><p>Никаких обещаний «минус 10 кг за 30 дней». Работа читается в теле, а не в подписи к фото.</p></article>
+    </div>
+  </section>
 
-<section class="manifesto" id="manifesto">
-  <blockquote>“A feed of real training, <em>not filtered motivation.</em>”</blockquote>
-  <p>Every profile is a living grid: streaks, PRs, session times. Follow, match the routine, keep the streak. What we surface is what actually moves you — and nothing you have to squint past.</p>
-</section>
+  <!-- ============ FORMAT ============ -->
+  <section class="sec wrap" id="format">
+    <div class="sec-head">
+      <h2 class="rv">Четыре шага от подписки до привычки.</h2>
+      <p class="aside mono rv" style="--d:80ms">02 — Формат<br><span style="letter-spacing:.02em;text-transform:none;font-size:13px;line-height:1.6;display:block;margin-top:10px">Дневник работает, пока в нём есть цифры. Всё остальное — оформление.</span></p>
+    </div>
+
+    <div class="format">
+      <ol class="steps">
+        <li class="rv"><span class="n">01</span><div><h3>Одна запись в день</h3><p>Сессия, тоннаж, самочувствие. Запись занимает меньше минуты и не требует ни вдохновения, ни настроения.</p></div></li>
+        <li class="rv" style="--d:60ms"><span class="n">02</span><div><h3>Тренируемся вместе с ростера</h3><p>Программа дня приходит в 06:00 и повторяется у всех 47 профилей — так появляется эффект группы.</p></div></li>
+        <li class="rv" style="--d:120ms"><span class="n">03</span><div><h3>Еда как часть программы</h3><p>Простые блюда на неделю: рецепт, раскладка по белку, список покупок. Без 3 000-калорийных смузи.</p></div></li>
+        <li class="rv" style="--d:180ms"><span class="n">04</span><div><h3>Неделя закрывается отчётом</h3><p>Тоннаж, сон, стрик. Сразу видно, где провал и что менять на следующей неделе.</p></div></li>
+      </ol>
+
+      <div class="phone-shell rv" style="--d:100ms">
+        <div class="phone">
+          <span class="notch" aria-hidden="true"></span>
+          <div class="screen">
+            <div class="ph-top">
+              <span class="mono mono--sm" style="color:var(--muted)">Дневник</span>
+              <span class="mono mono--sm" style="color:var(--accent)">14 окт · пн</span>
+            </div>
+            <div class="ph-cover">
+              <img src="img/hero-main.webp" width="900" height="1125" alt="Экран дневника тренировок" loading="lazy" decoding="async">
+              <div class="ov">
+                <span class="mono mono--sm" style="color:var(--olive-2)">Сессия №4 · нижняя, тяжёлая</span>
+                <b style="font-family:var(--serif);font-size:24px;font-weight:400;line-height:1.1;margin-top:6px">6 240 кг за 42 минуты</b>
+              </div>
+            </div>
+            <div class="ph-row"><span>Стрик</span><b>87 дней</b></div>
+            <div class="ph-row"><span>Сон</span><b>7 ч 40 мин</b></div>
+            <div class="ph-row"><span>RPE</span><b>7.5 / 10</b></div>
+            <div class="ph-row"><span>Белок</span><b class="ok">142 г ✓</b></div>
+            <div style="height:16px"></div>
+            <div class="ph-bar"><i></i></div>
+            <div class="ph-foot">
+              <span class="mono mono--sm" style="color:var(--muted)">Неделя 12 / 16</span>
+              <span class="mono mono--sm" style="color:var(--accent)">78 % закрыто</span>
+            </div>
+          </div>
+        </div>
+        <div class="phone-note">
+          <p class="mono mono--sm" style="color:var(--muted)">Заметка</p>
+          <p style="font-size:14px;margin-top:6px">Запись дня занимает 41 секунду — быстрее, чем сторис.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BAND ============ -->
+  <section class="band" aria-label="Кадр из выпуска">
+    <img src="img/feature-wide.webp" width="1400" height="600" alt="Пустой индустриальный зал на рассвете: штанга на полу, пыль в лучах света" loading="lazy" decoding="async">
+    <div class="ov">
+      <div class="in">
+        <h2 class="rv">42 минуты. Никто не снимал. <em>Сессия всё равно записана.</em></h2>
+        <p class="meta rv" style="--d:80ms"><b>Кадр из выпуска</b>Пустой зал, 06:12, меловая пыль в лучах. Половина записей в дневнике сделана именно так — без свидетелей и без камеры.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ROSTER ============ -->
+  <section class="sec wrap" id="roster">
+    <div class="sec-head">
+      <h2 class="rv">Девять профилей — девять дисциплин.</h2>
+      <p class="aside mono rv" style="--d:80ms">03 — Ростер<br><span style="letter-spacing:.02em;text-transform:none;font-size:13px;line-height:1.6;display:block;margin-top:10px">Каждый профиль — открытый дневник. Фильтруйте по дисциплине и смотрите, как выглядит регулярность.</span></p>
+    </div>
+
+    <div class="filters" role="group" aria-label="Фильтр по дисциплине">
+      <button class="chip" type="button" data-filter="all" aria-pressed="true">Все <i>9</i></button>
+      <button class="chip" type="button" data-filter="Сила" aria-pressed="false">Сила <i>1</i></button>
+      <button class="chip" type="button" data-filter="Пауэрлифтинг" aria-pressed="false">Пауэрлифтинг <i>1</i></button>
+      <button class="chip" type="button" data-filter="ОФП" aria-pressed="false">ОФП <i>1</i></button>
+      <button class="chip" type="button" data-filter="Бег" aria-pressed="false">Бег <i>2</i></button>
+      <button class="chip" type="button" data-filter="Питание" aria-pressed="false">Питание <i>1</i></button>
+      <button class="chip" type="button" data-filter="Мобилити" aria-pressed="false">Мобилити <i>1</i></button>
+      <button class="chip" type="button" data-filter="Бокс" aria-pressed="false">Бокс <i>1</i></button>
+      <button class="chip" type="button" data-filter="Плавание" aria-pressed="false">Плавание <i>1</i></button>
+    </div>
+
+    <div class="feature rv">
+        <figure class="fmedia">
+          <img src="img/roster-01-anna.webp" width="720" height="960" alt="Анна — жим штанги стоя в индустриальном зале" loading="lazy" decoding="async">
+        </figure>
+        <div class="fbody">
+          <p class="eyebrow mono">Профиль месяца · A01</p>
+          <h3>Анна</h3>
+          <p class="fmeta mono">@ishot_anna · Сила · 28 лет · зал «Downtown Barbell», 06:00</p>
+          <p class="lede">Три года назад пришла за прессом. Осталась за протоколом: четыре сессии в неделю, жим стоя, ни одной пропущенной записи с января. Тренируется до работы — в зале в шесть утра её узнают по разминке.</p>
+          <p class="fquote">«Пришла за прессом — осталась за дисциплиной. Пресс, кстати, тоже появился.»</p>
+          <div class="fstats">
+            <div><b>87</b><span>дней стрик</span></div>
+            <div><b>62 кг</b><span>жим стоя</span></div>
+            <div><b>214</b><span>сессий в дневнике</span></div>
+          </div>
+          <div class="hero-cta" style="margin-top:22px">
+            <a class="btn" href="#join">Открыть дневник <span class="arw" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+    </div>
+
+    <div class="roster" id="rosterGrid">
+      <article class="card rv" data-disc="Пауэрлифтинг">
+        <div class="media"><img src="img/roster-02-maria.webp" width="720" height="960" alt="Мария — тяга штанги в пауэрлифтинге" loading="lazy" decoding="async"></div>
+        <span class="idx">A02</span><span class="disc">Пауэрлифтинг</span>
+        <div class="id"><b>Мария</b><span>@ishot_maria · 30 лет</span></div>
+        <div class="body">
+          <p>Тяга, присед, жим. Зал на районе, тренер — тетрадь с 2019 года.</p>
+          <div class="stats"><div><b>134</b><span>дня стрик</span></div><div><b>142 кг</b><span>тяга</span></div><div><b>412</b><span>сессий</span></div></div>
+          <span class="go">открыть дневник <span class="arw" aria-hidden="true">→</span></span>
+        </div>
+      </article>
+
+      <article class="card rv" data-disc="ОФП">
+        <div class="media"><img src="img/roster-03-sofia.webp" width="720" height="960" alt="София — подтягивания на турнике в парке на рассвете" loading="lazy" decoding="async"></div>
+        <span class="idx">A03</span><span class="disc">ОФП</span>
+        <div class="id"><b>София</b><span>@ishot_sofia · 32 года</span></div>
+        <div class="body">
+          <p>Турник в парке, туман и собственный вес вместо железа.</p>
+          <div class="stats"><div><b>61</b><span>день стрик</span></div><div><b>14</b><span>подтягиваний</span></div><div><b>233</b><span>сессии</span></div></div>
+          <span class="go">открыть дневник <span class="arw" aria-hidden="true">→</span></span>
+        </div>
+      </article>
+
+      <article class="card rv" data-disc="Бег">
+        <div class="media"><img src="img/roster-04-olivia.webp" width="720" height="960" alt="Оливия — утренняя пробежка по набережной" loading="lazy" decoding="async"></div>
+        <span class="idx">A04</span><span class="disc">Бег</span>
+        <div class="id"><b>Оливия</b><span>@ishot_olivia · 26 лет</span></div>
+        <div class="body">
+          <p>Набережная до моста и обратно. Дождь в прогнозе — не причина.</p>
+          <div class="stats"><div><b>208</b><span>дней стрик</span></div><div><b>21 км</b><span>максимум</span></div><div><b>4:52</b><span>темп / км</span></div></div>
+          <span class="go">открыть дневник <span class="arw" aria-hidden="true">→</span></span>
+        </div>
+      </article>
+
+      <article class="card rv" data-disc="Питание">
+        <div class="media"><img src="img/roster-05-emma.webp" width="720" height="960" alt="Эмма — заготовка еды на неделю на домашней кухне" loading="lazy" decoding="async"></div>
+        <span class="idx">A05</span><span class="disc">Питание</span>
+        <div class="id"><b>Эмма</b><span>@ishot_emma · 27 лет</span></div>
+        <div class="body">
+          <p>Готовит на пять дней вперёд и фотографирует не блюдо, а раскладку.</p>
+          <div class="stats"><div><b>96</b><span>дней стрик</span></div><div><b>5</b><span>рационов/нед</span></div><div><b>142 г</b><span>белка/день</span></div></div>
+          <span class="go">открыть дневник <span class="arw" aria-hidden="true">→</span></span>
+        </div>
+      </article>
+
+      <article class="card rv" data-disc="Мобилити">
+        <div class="media"><img src="img/roster-06-lily.webp" width="720" height="960" alt="Лили — растяжка на коврике в домашней студии" loading="lazy" decoding="async"></div>
+        <span class="idx">A06</span><span class="disc">Мобилити</span>
+        <div class="id"><b>Лили</b><span>@ishot_lily · 31 год</span></div>
+        <div class="body">
+          <p>18 минут в день. Самая скучная колонка выпуска — и самая полезная.</p>
+          <div class="stats"><div><b>152</b><span>дня стрик</span></div><div><b>18 мин</b><span>в день</span></div><div><b>42</b><span>упражнения</span></div></div>
+          <span class="go">открыть дневник <span class="arw" aria-hidden="true">→</span></span>
+        </div>
+      </article>
+
+      <article class="card rv" data-disc="Бокс">
+        <div class="media"><img src="img/roster-07-nadia.webp" width="720" height="960" alt="Надия — работа на тяжёлом мешке в боксёрском зале" loading="lazy" decoding="async"></div>
+        <span class="idx">A07</span><span class="disc">Бокс</span>
+        <div class="id"><b>Надия</b><span>@ishot_nadia · 29 лет</span></div>
+        <div class="body">
+          <p>Мешок, скакалка, бинты. Раунды считает вслух — привычка с первого зала.</p>
+          <div class="stats"><div><b>44</b><span>дня стрик</span></div><div><b>9</b><span>раундов</span></div><div><b>3</b><span>тренировки/нед</span></div></div>
+          <span class="go">открыть дневник <span class="arw" aria-hidden="true">→</span></span>
+        </div>
+      </article>
+
+      <article class="card card--row rv" data-disc="Бег">
+        <div class="media media--pending"><span class="note mono mono--sm"><b>A08</b>кадр из лаборатории · появится в выпуске №02</span></div>
+        <span class="idx">A08</span><span class="disc">Бег</span>
+        <div class="id"><b>Юки</b><span>@ishot_yuki · 28 лет</span></div>
+        <div class="body">
+          <p>Длинные по 90 минут. Ведёт не километры, а часы под нагрузкой.</p>
+          <div class="stats"><div><b>73</b><span>дня стрик</span></div><div><b>42 км</b><span>максимум</span></div><div><b>1 260</b><span>км за год</span></div></div>
+          <span class="go">открыть дневник <span class="arw" aria-hidden="true">→</span></span>
+        </div>
+      </article>
+
+      <article class="card card--row rv" data-disc="Плавание">
+        <div class="media media--pending"><span class="note mono mono--sm"><b>A09</b>кадр из лаборатории · появится в выпуске №02</span></div>
+        <span class="idx">A09</span><span class="disc">Плавание</span>
+        <div class="id"><b>Клара</b><span>@ishot_clara · 30 лет</span></div>
+        <div class="body">
+          <p>Плечи болят от зала — идут в воду. Дорожка №3, 06:30, всегда.</p>
+          <div class="stats"><div><b>118</b><span>дней стрик</span></div><div><b>2 400</b><span>метров</span></div><div><b>4</b><span>заплыва/нед</span></div></div>
+          <span class="go">открыть дневник <span class="arw" aria-hidden="true">→</span></span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ COLUMNS ============ -->
+  <section class="sec wrap" id="columns">
+    <div class="sec-head">
+      <h2 class="rv">Три колонки: тренировка, еда, восстановление.</h2>
+      <p class="aside mono rv" style="--d:80ms">04 — Колонки<br><span style="letter-spacing:.02em;text-transform:none;font-size:13px;line-height:1.6;display:block;margin-top:10px">Один и тот же выпуск читается по-разному в зависимости от того, где у вас сейчас провал.</span></p>
+    </div>
+    <div class="cols">
+      <article class="col rv">
+        <div class="media"><img src="img/column-train.webp" width="800" height="500" alt="Тренировка: блины на штанге в свете утреннего окна" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <span class="kicker mono"><span style="color:var(--accent)">Колонка 01</span><span style="color:var(--muted)">Понедельник</span></span>
+          <h3>Train</h3>
+          <p>Программа недели и разбор техники от тренеров ростера. Что они реально делают — а не то, что выкладывают.</p>
+          <ul><li>Программа недели</li><li>Тоннаж и RPE</li><li>Разминка 12 минут</li><li>Разбор техники</li></ul>
+        </div>
+      </article>
+      <article class="col rv" style="--d:80ms">
+        <div class="media"><img src="img/column-fuel.webp" width="800" height="500" alt="Еда: контейнеры с подготовленной едой на свету у окна" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <span class="kicker mono"><span style="color:var(--accent)">Колонка 02</span><span style="color:var(--muted)">Четверг</span></span>
+          <h3>Fuel</h3>
+          <p>Еда, которая вписывается в реальный день: заготовка на пять дней, белок без порошка, ничего лишнего.</p>
+          <ul><li>Раскладка на 5 дней</li><li>Список покупок</li><li>Белок без порошка</li><li>Еда до и после</li></ul>
+        </div>
+      </article>
+      <article class="col rv" style="--d:160ms">
+        <div class="media"><img src="img/column-recover.webp" width="800" height="500" alt="Восстановление: спокойная растяжка на коврике утром" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <span class="kicker mono"><span style="color:var(--accent)">Колонка 03</span><span style="color:var(--muted)">Воскресенье</span></span>
+          <h3>Recover</h3>
+          <p>Сон, делоады и мобилити. Та часть, которую никто не публикует, — и та, что выигрывает сезон.</p>
+          <ul><li>Сон как метрика</li><li>Делоад каждые 4 недели</li><li>Мобилити 18 минут</li><li>Дыхание 4-7-8</li></ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ LOG ============ -->
+  <section class="sec wrap" id="log">
+    <div class="sec-head">
+      <h2 class="rv">Как выглядит запись в дневнике.</h2>
+      <p class="aside mono rv" style="--d:80ms">05 — Протокол<br><span style="letter-spacing:.02em;text-transform:none;font-size:13px;line-height:1.6;display:block;margin-top:10px">Одна страница, шесть строк. Данные вносятся вручную — это принципиальная часть метода.</span></p>
+    </div>
+    <div class="log">
+      <div class="log-card rv">
+        <div class="lhead"><b>Запись дня №4 128</b><span class="mono mono--sm" style="color:var(--muted)">14 окт · 06:54</span></div>
+        <table class="log-table">
+          <thead><tr><th>Показатель</th><th>Значение</th><th>Δ к прошлой</th></tr></thead>
+          <tbody>
+            <tr><td>Сессия</td><td class="num">Нижняя, тяжёлая · 42 мин</td><td>—</td></tr>
+            <tr><td>Тоннаж</td><td class="num">6 240 кг</td><td class="up">▲ +340</td></tr>
+            <tr><td>Сон</td><td class="num">7 ч 40 мин</td><td class="up">▲ +25 мин</td></tr>
+            <tr><td>RPE</td><td class="num">7.5 / 10</td><td>= 0</td></tr>
+            <tr><td>Белок</td><td class="num">142 г</td><td class="up">✓ цель</td></tr>
+            <tr><td>Streak</td><td class="num">87 дней</td><td class="up">▲ +1</td></tr>
+          </tbody>
+        </table>
+        <p class="log-note">Пропуск не обнуляет стрик — он его останавливает. Возвращаемся на следующий день, без драмы и без «начну с понедельника».</p>
+      </div>
+      <div class="rv" style="--d:80ms">
+        <p class="statement" style="font-size:clamp(24px,2.9vw,42px)">Никаких приложений, которые считают за вас. <em>Только цифры, которые вы вписали сами.</em></p>
+        <p class="lede" style="margin-top:22px">За 12 недель записи видно то, что не показывает ни одно зеркало: где именно вы срываетесь. Обычно это не тренировка — это четверг и сон.</p>
+        <div class="hero-cta" style="margin-top:28px">
+          <a class="btn" href="#join">Начать вести дневник</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GEAR ============ -->
+  <section class="sec wrap" id="gear">
+    <div class="sec-head">
+      <h2 class="rv">Экипировка, в которой это делается.</h2>
+      <p class="aside mono rv" style="--d:80ms">06 — Индекс<br><span style="letter-spacing:.02em;text-transform:none;font-size:13px;line-height:1.6;display:block;margin-top:10px">В чём ростер реально тренируется — по дисциплинам, без партнёрских ссылок и без «промокодов».</span></p>
+    </div>
+    <div class="gear-grid">
+      <div class="gear-list">
+        <div class="gear-row rv"><span class="g-idx">G01</span><span class="g-name">Nike</span><span class="g-note">Кроссовки для зала и беговые модели на 800+ км</span><span class="g-tag">Сила · Бег</span></div>
+        <div class="gear-row rv"><span class="g-idx">G02</span><span class="g-name">Adidas</span><span class="g-note">Штангетки и базовая тренировочная линейка</span><span class="g-tag">Пауэрлифтинг</span></div>
+        <div class="gear-row rv"><span class="g-idx">G03</span><span class="g-name">Gymshark</span><span class="g-note">Легинсы и топы, которые выдерживают 4 сессии в неделю</span><span class="g-tag">Сила</span></div>
+        <div class="gear-row rv"><span class="g-idx">G04</span><span class="g-name">Lululemon</span><span class="g-note">Мобилити и мягкие тренировки: ничего не мешает движению</span><span class="g-tag">Мобилити</span></div>
+        <div class="gear-row rv"><span class="g-idx">G05</span><span class="g-name">HOKA</span><span class="g-note">Длинные по 90 минут: амортизация важнее цвета</span><span class="g-tag">Бег</span></div>
+        <div class="gear-row rv"><span class="g-idx">G06</span><span class="g-name">Asics</span><span class="g-note">Темповые тренировки и обувь для соревновательного сезона</span><span class="g-tag">Бег</span></div>
+        <div class="gear-row rv"><span class="g-idx">G07</span><span class="g-name">Speedo</span><span class="g-note">Плавки-джеммеры, очки, шапочка — три позиции и всё</span><span class="g-tag">Плавание</span></div>
+        <div class="gear-row rv"><span class="g-idx">G08</span><span class="g-name">Under Armour</span><span class="g-note">Бинты, перчатки и компрессия для ударной работы</span><span class="g-tag">Бокс</span></div>
+      </div>
+      <ul class="margin-notes">
+        <li><b>01</b><span>Цены и ссылки не публикуем — это не витрина. Индекс нужен, чтобы понимать, чем закрыт вопрос по дисциплине.</span></li>
+        <li><b>02</b><span>Никаких партнёрских ссылок и промокодов. Если бренд появился в списке — значит, в нём прошла не одна сотня сессий.</span></li>
+        <li><b>03</b><span>Размер имеет значение: не по размеру подобранная вещь валит технику быстрее, чем нехватка силы.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ JOIN ============ -->
+  <section class="sec--tight wrap" id="join" style="padding-bottom:0">
+    <div class="join rv">
+      <div>
+        <p class="eyebrow mono">Набор в выпуск №02</p>
+        <h2 style="margin-top:16px">Тренируйтесь с нами. <em>Дневник уже открыт.</em></h2>
+        <p class="lede" style="margin-top:18px">Двенадцать слотов в следующем выпуске. Ростер читается бесплатно — начните с одной записи сегодня и посмотрите, что будет к воскресенью.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn--solid" href="https://instagram.com/ishotgirls" target="_blank" rel="noopener">@ishotgirls <span class="arw" aria-hidden="true">→</span></a>
+        <a class="btn" href="https://instagram.com/ishotstars" target="_blank" rel="noopener">@ishotstars <span class="arw" aria-hidden="true">→</span></a>
+        <p class="mono mono--sm" style="color:var(--muted);margin-top:6px">Ответ в течение 48 часов · без обязательств</p>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer>
-  <div class="foot">
-    <p>© 2026 ISHOTGIRLS. All rights reserved.</p>
-    <p><a href="https://instagram.com/ishotgirls" target="_blank" rel="noopener">@ishotgirls</a> · <a href="https://instagram.com/ishotstars" target="_blank" rel="noopener">@ishotstars</a> · <a href="/ishotgirls/sitemap.xml">Sitemap</a></p>
-    <p>Demo prototype — maximum capabilities of AI in web development.</p>
+  <div class="wrap">
+    <div class="foot-in">
+      <div class="foot-brand">
+        <b>ISHOTGIRLS</b>
+        <p>Field Notes — кураторский дневник реальных тренировок. Выпуск №01, обновляется ежедневно.</p>
+        <p class="mono mono--sm" style="color:var(--muted);margin-top:16px">Demo prototype · максимум возможностей ИИ в веб-разработке</p>
+      </div>
+      <div>
+        <h4>Выпуск</h4>
+        <ul>
+          <li><a href="#manifesto">Манифест</a></li>
+          <li><a href="#format">Формат</a></li>
+          <li><a href="#roster">Ростер</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Разделы</h4>
+        <ul>
+          <li><a href="#columns">Колонки</a></li>
+          <li><a href="#log">Протокол</a></li>
+          <li><a href="#gear">Индекс экипировки</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Связь</h4>
+        <ul>
+          <li><a href="https://instagram.com/ishotgirls" target="_blank" rel="noopener">@ishotgirls</a></li>
+          <li><a href="https://instagram.com/ishotstars" target="_blank" rel="noopener">@ishotstars</a></li>
+          <li><a href="#join">Набор в №02</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar mono mono--sm">
+      <span>© <span id="year">2026</span> ISHOTGIRLS · Все права защищены</span>
+      <span>Сделано как демо · без партнёрских ссылок</span>
+      <a href="#top" style="color:var(--accent)">Наверх ↑</a>
+    </div>
   </div>
 </footer>
 
-<button class="to-top" id="toTop" aria-label="Back to top" aria-hidden="true">↑</button>
+<button class="to-top" id="toTop" type="button" aria-label="Наверх">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
 <script>
-const toTop = document.getElementById('toTop');
-const toTopLabel = () => { const show = window.scrollY > 600; toTop.classList.toggle('show', show); toTop.setAttribute('aria-hidden', String(!show)); };
-window.addEventListener('scroll', toTopLabel, { passive: true });
-toTopLabel();
-toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+(function () {
+  "use strict";
+  var root = document.documentElement;
+  // matchMedia is universal in browsers but guarded anyway: a missing API must
+  // never take the rest of the page's interactivity down with it.
+  function mq(q) {
+    try { return window.matchMedia ? window.matchMedia(q) : { matches: false }; }
+    catch (e) { return { matches: false }; }
+  }
+  var reduce = mq("(prefers-reduced-motion: reduce)").matches;
 
-const themeBtn = document.getElementById('themeBtn');
-const applyTheme = (t) => {
-  document.documentElement.dataset.theme = t;
-  themeBtn.textContent = t === 'dark' ? '☾' : '☀';
-  try { localStorage.setItem('ishot-theme', t); } catch (e) {}
-};
-themeBtn.addEventListener('click', () => applyTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'));
-try { const saved = localStorage.getItem('ishot-theme'); if (saved) applyTheme(saved); } catch (e) {}
+  /* ---- theme -------------------------------------------------- */
+  var themeBtn = document.getElementById("themeBtn");
+  var themeIcon = document.getElementById("themeIcon");
+  var SUN = "M12 4V2m0 20v-2m8-8h2M2 12h2m13.66-5.66l1.41-1.41M4.93 19.07l1.41-1.41m0-11.32L4.93 4.93m14.14 14.14l-1.41-1.41M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z";
+  var MOON = "M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z";
+  function setTheme(t, persist) {
+    root.dataset.theme = t;
+    if (themeIcon) themeIcon.setAttribute("d", t === "dark" ? MOON : SUN);
+    if (persist) { try { localStorage.setItem("ishot-theme", t); } catch (e) {} }
+  }
+  var saved = null;
+  try { saved = localStorage.getItem("ishot-theme"); } catch (e) {}
+  setTheme(saved || (mq("(prefers-color-scheme: light)").matches ? "light" : "dark"), false);
+  if (themeBtn) themeBtn.addEventListener("click", function () {
+    setTheme(root.dataset.theme === "dark" ? "light" : "dark", true);
+  });
 
-const burger = document.getElementById('burger');
-const panel = document.getElementById('mobilePanel');
-burger.addEventListener('click', () => {
-  const open = panel.classList.toggle('open');
-  burger.setAttribute('aria-expanded', String(open));
-});
-panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => panel.classList.remove('open')));
+  /* ---- scroll progress + to-top ------------------------------- */
+  var bar = document.getElementById("bar");
+  var toTop = document.getElementById("toTop");
+  var ticking = false;
+  function onScroll() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var p = h > 0 ? Math.min(1, window.scrollY / h) : 0;
+    if (bar) bar.style.transform = "scaleX(" + p.toFixed(4) + ")";
+    if (toTop) toTop.classList.toggle("show", window.scrollY > 700);
+    ticking = false;
+  }
+  window.addEventListener("scroll", function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+  }, { passive: true });
+  onScroll();
+  if (toTop) toTop.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+  });
+
+  /* ---- drawer ------------------------------------------------- */
+  var drawer = document.getElementById("drawer");
+  var burger = document.getElementById("burger");
+  var drawerClose = document.getElementById("drawerClose");
+  function toggleDrawer(open) {
+    if (!drawer) return;
+    drawer.dataset.open = String(open);
+    drawer.setAttribute("aria-hidden", String(!open));
+    if (burger) burger.setAttribute("aria-expanded", String(open));
+    document.body.style.overflow = open ? "hidden" : "";
+  }
+  if (burger) burger.addEventListener("click", function () { toggleDrawer(drawer.dataset.open !== "true"); });
+  if (drawerClose) drawerClose.addEventListener("click", function () { toggleDrawer(false); });
+  document.querySelectorAll("[data-close]").forEach(function (a) {
+    a.addEventListener("click", function () { toggleDrawer(false); });
+  });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") toggleDrawer(false); });
+
+  /* ---- reveal ------------------------------------------------ */
+  var items = document.querySelectorAll(".rv");
+  if (reduce || !("IntersectionObserver" in window)) {
+    items.forEach(function (el) { el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+    items.forEach(function (el) { io.observe(el); });
+  }
+
+  /* ---- roster filter ----------------------------------------- */
+  var grid = document.getElementById("rosterGrid");
+  var chips = document.querySelectorAll(".chip");
+  chips.forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      var f = chip.dataset.filter;
+      chips.forEach(function (c) { c.setAttribute("aria-pressed", String(c === chip)); });
+      grid.querySelectorAll(".card").forEach(function (card) {
+        var show = f === "all" || card.dataset.disc === f;
+        card.hidden = !show;
+      });
+      if (grid.scrollIntoView && f !== "all") {
+        var y = grid.getBoundingClientRect().top + window.scrollY - 96;
+        window.scrollTo({ top: y, behavior: reduce ? "auto" : "smooth" });
+      }
+    });
+  });
+
+  /* ---- year --------------------------------------------------- */
+  var y = document.getElementById("year");
+  if (y) y.textContent = String(new Date().getFullYear());
+
+  /* ---- desktop CTA appears after hero ------------------------ */
+  var cta = document.querySelector("[data-desktop-cta]");
+  if (cta && mq("(min-width: 1001px)").matches) {
+    if (reduce || !("IntersectionObserver" in window)) { cta.style.display = ""; }
+    else {
+      var hero = document.querySelector(".hero");
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { cta.style.display = en.isIntersecting ? "none" : ""; });
+      }, { threshold: 0 }).observe(hero);
+    }
+  }
+})();
 </script>
 </body>
 </html>

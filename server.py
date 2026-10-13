@@ -1,41 +1,70 @@
 #!/usr/bin/env python3
 """
-Simple HTTP server to serve the ISHOTGIRLS website
+Сервер для локального просмотра сайта ISHOTGIRLS.
+
+  python3 server.py            # http://localhost:8000
+  python3 server.py 8080       # другой порт
+  PORT=8080 python3 server.py  # порт через переменную окружения
+
+Раздаётся каталог, в котором лежит сам server.py, поэтому скрипт работает
+из любого места и не зависит от абсолютных путей. Слушает 0.0.0.0, чтобы
+страница открывалась и через внешний прокси (превью в браузере).
 """
+from __future__ import annotations
+
 import http.server
+import os
 import socketserver
-from pathlib import Path
 import sys
+from pathlib import Path
 
-class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
+ROOT = Path(__file__).resolve().parent
+
+
+class Handler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, directory="/workspace", **kwargs)
+        super().__init__(*args, directory=str(ROOT), **kwargs)
 
-    def end_headers(self):
-        # Add security and performance headers
-        self.send_header('X-Content-Type-Options', 'nosniff')
-        self.send_header('X-Frame-Options', 'DENY')
-        self.send_header('X-XSS-Protection', '1; mode=block')
+    def end_headers(self) -> None:
+        # Cache static assets hard, but never cache the HTML itself.
+        if self.path.endswith((".html", "/")) or "." not in Path(self.path).name:
+            self.send_header("Cache-Control", "no-store, must-revalidate")
+        else:
+            self.send_header("Cache-Control", "public, max-age=604800")
+        self.send_header("X-Content-Type-Options", "nosniff")
+        self.send_header("Referrer-Policy", "strict-origin-when-cross-origin")
+        # Deliberately no X-Frame-Options: the site must be embeddable in the
+        # sandbox preview iframe.
         super().end_headers()
 
-def main():
+    def log_message(self, fmt: str, *args) -> None:  # quieter logs
+        sys.stderr.write("  %s\n" % (fmt % args))
+
+
+class Server(socketserver.ThreadingTCPServer):
+    allow_reuse_address = True
+    daemon_threads = True
+
+
+def main() -> None:
     port = 8000
     if len(sys.argv) > 1:
         try:
             port = int(sys.argv[1])
         except ValueError:
-            print("Port must be a number")
-            sys.exit(1)
+            print("Порт должен быть числом")
+            raise SystemExit(1)
+    elif os.environ.get("PORT"):
+        port = int(os.environ["PORT"])
 
-    handler = CustomHTTPRequestHandler
-    
-    with socketserver.TCPServer(("", port), handler) as httpd:
-        print(f"Serving website at http://localhost:{port}")
-        print("Press Ctrl+C to stop the server")
+    with Server(("0.0.0.0", port), Handler) as httpd:
+        print(f"ISHOTGIRLS → http://localhost:{port}  (раздаётся {ROOT})")
+        print("Ctrl+C — остановить")
         try:
             httpd.serve_forever()
         except KeyboardInterrupt:
-            print("\nServer stopped.")
+            print("\nОстановлено.")
+
 
 if __name__ == "__main__":
     main()
