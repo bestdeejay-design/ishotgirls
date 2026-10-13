@@ -380,6 +380,42 @@ footer{border-top:1px solid var(--line-2);margin-top:var(--sec);background:var(-
 .foot-brand p{color:var(--muted);font-size:14px;max-width:42ch}
 .foot-bar{border-top:1px solid var(--line);padding:18px 0;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;color:var(--muted)}
 
+/* ---------- athlete sheet (dialog) ---------- */
+.card{cursor:pointer}
+.card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.feature .fmedia{cursor:pointer}
+.sheet{position:fixed;inset:0;z-index:95;display:grid;place-items:center;padding:clamp(10px,3vw,40px)}
+.sheet[hidden]{display:none}
+.sheet-backdrop{position:absolute;inset:0;background:rgba(6,6,5,.74);backdrop-filter:blur(7px);animation:sheet-fade .25s ease both}
+.sheet-panel{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,.4fr) minmax(0,.6fr);width:min(100%,980px);max-height:min(90vh,920px);overflow:auto;background:var(--bg-2);border:1px solid var(--line-2);box-shadow:0 70px 130px -60px rgba(0,0,0,.95);animation:sheet-up .34s cubic-bezier(.2,.7,.2,1) both}
+.sheet-media{position:relative;overflow:hidden;background:var(--bg-3);min-height:100%}
+.sheet-media img{width:100%;height:100%;min-height:280px;object-fit:cover;object-position:center 18%;filter:saturate(.95)}
+.sheet-media img[hidden]{display:none}
+.sheet.no-media .sheet-panel{grid-template-columns:1fr}
+.sheet.no-media .sheet-media{display:none}
+.sheet-body{padding:clamp(20px,3vw,42px)}
+.sheet h3{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4vw,56px);line-height:.98;letter-spacing:-.02em;margin:10px 0 6px}
+.sheet .smeta{color:var(--muted);font-size:14.5px}
+.sheet-quote{font-family:var(--serif);font-style:italic;font-size:clamp(17px,1.7vw,21px);line-height:1.32;border-left:1px solid var(--line-2);padding-left:15px;margin:18px 0}
+.sheet-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;border-block:1px solid var(--line);padding:16px 0;margin-bottom:14px}
+.sheet-stats b{display:block;font-family:var(--mono);font-size:clamp(14px,1.5vw,18px);font-weight:600}
+.sheet-stats span{display:block;font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.sheet-x{position:absolute;top:12px;right:12px;z-index:3;background:color-mix(in srgb,var(--bg) 72%,transparent);backdrop-filter:blur(6px)}
+.sheet-x svg{width:14px;height:14px}
+.sheet .lt{width:100%;border-collapse:collapse}
+.sheet .lt th,.sheet .lt td{text-align:left;padding:11px 6px;border-bottom:1px solid var(--line);font-size:13.5px}
+.sheet .lt th{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.sheet .lt td:first-child{font-family:var(--mono);font-size:11px;color:var(--fg-2);white-space:nowrap}
+.sheet .lt td.n{font-family:var(--mono);font-size:13px;font-weight:600}
+@keyframes sheet-fade{from{opacity:0}to{opacity:1}}
+@keyframes sheet-up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media(max-width:820px){
+  .sheet-panel{grid-template-columns:1fr;max-height:92vh}
+  .sheet-media{max-height:240px;min-height:0}
+  .sheet-media img{height:240px;min-height:0}
+}
+@media(prefers-reduced-motion:reduce){.sheet-backdrop,.sheet-panel{animation:none}}
+
 .to-top{position:fixed;right:18px;bottom:18px;z-index:75;width:46px;height:46px;border-radius:50%;border:1px solid var(--line-2);background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px);display:grid;place-items:center;color:var(--fg);opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .3s,transform .3s,visibility .3s,background .25s,color .25s}
 .to-top.show{opacity:1;visibility:visible;transform:none}
 .to-top:hover{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
@@ -597,7 +633,7 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
     </div>
 
     <div class="feature rv">
-        <figure class="fmedia">
+        <figure class="fmedia" data-profile="anna" role="button" tabindex="0">
           <img src="img/roster-01-anna.webp" width="720" height="960" alt="Анна — жим штанги стоя в индустриальном зале" loading="lazy" decoding="async">
         </figure>
         <div class="fbody">
@@ -612,13 +648,13 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
             <div><b>214</b><span>сессий в дневнике</span></div>
           </div>
           <div class="hero-cta" style="margin-top:22px">
-            <a class="btn" href="#join">Открыть дневник <span class="arw" aria-hidden="true">→</span></a>
+            <button class="btn" type="button" data-profile="anna">Открыть дневник <span class="arw" aria-hidden="true">→</span></button>
           </div>
         </div>
     </div>
 
     <div class="roster" id="rosterGrid">
-      <article class="card rv" data-disc="Пауэрлифтинг">
+      <article class="card rv" data-disc="Пауэрлифтинг" data-profile="maria" role="button" tabindex="0">
         <div class="media"><img src="img/roster-02-maria.webp" width="720" height="960" alt="Мария — тяга штанги в пауэрлифтинге" loading="lazy" decoding="async"></div>
         <span class="idx">A02</span><span class="disc">Пауэрлифтинг</span>
         <div class="id"><b>Мария</b><span>@ishot_maria · 30 лет</span></div>
@@ -629,7 +665,7 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
         </div>
       </article>
 
-      <article class="card rv" data-disc="ОФП">
+      <article class="card rv" data-disc="ОФП" data-profile="sofia" role="button" tabindex="0">
         <div class="media"><img src="img/roster-03-sofia.webp" width="720" height="960" alt="София — подтягивания на турнике в парке на рассвете" loading="lazy" decoding="async"></div>
         <span class="idx">A03</span><span class="disc">ОФП</span>
         <div class="id"><b>София</b><span>@ishot_sofia · 32 года</span></div>
@@ -640,7 +676,7 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
         </div>
       </article>
 
-      <article class="card rv" data-disc="Бег">
+      <article class="card rv" data-disc="Бег" data-profile="olivia" role="button" tabindex="0">
         <div class="media"><img src="img/roster-04-olivia.webp" width="720" height="960" alt="Оливия — утренняя пробежка по набережной" loading="lazy" decoding="async"></div>
         <span class="idx">A04</span><span class="disc">Бег</span>
         <div class="id"><b>Оливия</b><span>@ishot_olivia · 26 лет</span></div>
@@ -651,7 +687,7 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
         </div>
       </article>
 
-      <article class="card rv" data-disc="Питание">
+      <article class="card rv" data-disc="Питание" data-profile="emma" role="button" tabindex="0">
         <div class="media"><img src="img/roster-05-emma.webp" width="720" height="960" alt="Эмма — заготовка еды на неделю на домашней кухне" loading="lazy" decoding="async"></div>
         <span class="idx">A05</span><span class="disc">Питание</span>
         <div class="id"><b>Эмма</b><span>@ishot_emma · 27 лет</span></div>
@@ -662,7 +698,7 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
         </div>
       </article>
 
-      <article class="card rv" data-disc="Мобилити">
+      <article class="card rv" data-disc="Мобилити" data-profile="lily" role="button" tabindex="0">
         <div class="media"><img src="img/roster-06-lily.webp" width="720" height="960" alt="Лили — растяжка на коврике в домашней студии" loading="lazy" decoding="async"></div>
         <span class="idx">A06</span><span class="disc">Мобилити</span>
         <div class="id"><b>Лили</b><span>@ishot_lily · 31 год</span></div>
@@ -673,7 +709,7 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
         </div>
       </article>
 
-      <article class="card rv" data-disc="Бокс">
+      <article class="card rv" data-disc="Бокс" data-profile="nadia" role="button" tabindex="0">
         <div class="media"><img src="img/roster-07-nadia.webp" width="720" height="960" alt="Надия — работа на тяжёлом мешке в боксёрском зале" loading="lazy" decoding="async"></div>
         <span class="idx">A07</span><span class="disc">Бокс</span>
         <div class="id"><b>Надия</b><span>@ishot_nadia · 29 лет</span></div>
@@ -684,7 +720,7 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
         </div>
       </article>
 
-      <article class="card card--row rv" data-disc="Бег">
+      <article class="card card--row rv" data-disc="Бег" data-profile="yuki" role="button" tabindex="0">
         <div class="media media--pending"><span class="note mono mono--sm"><b>A08</b>кадр из лаборатории · появится в выпуске №02</span></div>
         <span class="idx">A08</span><span class="disc">Бег</span>
         <div class="id"><b>Юки</b><span>@ishot_yuki · 28 лет</span></div>
@@ -695,7 +731,7 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
         </div>
       </article>
 
-      <article class="card card--row rv" data-disc="Плавание">
+      <article class="card card--row rv" data-disc="Плавание" data-profile="clara" role="button" tabindex="0">
         <div class="media media--pending"><span class="note mono mono--sm"><b>A09</b>кадр из лаборатории · появится в выпуске №02</span></div>
         <span class="idx">A09</span><span class="disc">Плавание</span>
         <div class="id"><b>Клара</b><span>@ishot_clara · 30 лет</span></div>
@@ -860,6 +896,30 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
   </div>
 </footer>
 
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetName" hidden>
+  <div class="sheet-backdrop" data-sheet-close></div>
+  <div class="sheet-panel">
+    <button class="icon-btn sheet-x" type="button" data-sheet-close aria-label="Закрыть профиль">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="sheet-media"><img id="sheetImg" src="" alt="" width="720" height="960" decoding="async"></div>
+    <div class="sheet-body">
+      <p class="eyebrow mono" id="sheetDisc">Профиль</p>
+      <h3 id="sheetName">—</h3>
+      <p class="mono smeta" id="sheetMeta"></p>
+      <p class="sheet-quote" id="sheetQuote"></p>
+      <div class="sheet-stats" id="sheetStats"></div>
+      <table class="lt">
+        <thead><tr><th>Дата</th><th>Сессия</th><th>Объём</th><th>RPE</th></tr></thead>
+        <tbody id="sheetRows"></tbody>
+      </table>
+      <div class="hero-cta" style="margin-top:20px">
+        <a class="btn btn--solid" href="#join" data-sheet-close>Тренироваться вместе <span class="arw" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <button class="to-top" id="toTop" type="button" aria-label="Наверх">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </button>
@@ -942,6 +1002,146 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
     items.forEach(function (el) { io.observe(el); });
   }
+
+  /* ---- athlete sheet ----------------------------------------- */
+  var PROFILES = {
+    anna: {
+      ru: "Анна", handle: "@ishot_anna", disc: "Сила", age: "28 лет",
+      place: "зал «Downtown Barbell» · 06:00", streak: "87",
+      stats: [["62 кг", "жим стоя"], ["214", "сессий"], ["6 240 кг", "объём/день"]],
+      quote: "«Пришла за прессом — осталась за дисциплиной. Пресс, кстати, тоже появился.»",
+      rows: [["14 окт", "Нижняя, тяжёлая", "6 240 кг", "7.5"], ["12 окт", "Верх, жим стоя", "3 180 кг", "8.0"], ["10 окт", "Техника, разминка", "1 450 кг", "5.0"]]
+    },
+    maria: {
+      ru: "Мария", handle: "@ishot_maria", disc: "Пауэрлифтинг", age: "30 лет",
+      place: "зал на районе · 19:30", streak: "134",
+      stats: [["142 кг", "тяга"], ["412", "сессий"], ["9 100 кг", "объём/день"]],
+      quote: "«Тренер — тетрадь с 2019 года. Прогресс в ней виден лучше, чем в зеркале.»",
+      rows: [["13 окт", "Тяга, синглы", "4 900 кг", "8.5"], ["11 окт", "Присед + жим", "6 300 кг", "8.0"], ["9 окт", "Подсобка", "3 750 кг", "6.5"]]
+    },
+    sofia: {
+      ru: "София", handle: "@ishot_sofia", disc: "ОФП", age: "32 года",
+      place: "парк у реки · 07:00", streak: "61",
+      stats: [["14", "подтягиваний"], ["233", "сессии"], ["32 мин", "круг"]],
+      quote: "«Турник в парке неудобный. Именно поэтому я иду туда, а не в зал.»",
+      rows: [["14 окт", "Турник, выходы силой", "—", "7.0"], ["12 окт", "Брусья, пресс", "—", "6.5"], ["10 окт", "Круг ×4", "—", "8.0"]]
+    },
+    olivia: {
+      ru: "Оливия", handle: "@ishot_olivia", disc: "Бег", age: "26 лет",
+      place: "набережная · 06:20", streak: "208",
+      stats: [["21 км", "максимум"], ["4:52", "темп / км"], ["52 км", "неделя"]],
+      quote: "«Дождь в прогнозе — это не причина, это погода.»",
+      rows: [["14 окт", "Лёгкий кросс 8 км", "8 км", "4.5"], ["13 окт", "Темповой 2×3 км", "6 км", "7.5"], ["11 окт", "Длинная 16 км", "16 км", "6.0"]]
+    },
+    emma: {
+      ru: "Эмма", handle: "@ishot_emma", disc: "Питание", age: "27 лет",
+      place: "домашняя кухня · 08:00", streak: "96",
+      stats: [["142 г", "белка/день"], ["5", "рационов/нед"], ["2 ч", "заготовка"]],
+      quote: "«Я фотографирую не блюдо, а раскладку. Плита врёт, весы — нет.»",
+      rows: [["14 окт", "Заготовка на 5 дней", "5 порций", "—"], ["12 окт", "Список покупок", "—", "—"], ["7 окт", "Пересчёт белка", "142 г", "—"]]
+    },
+    lily: {
+      ru: "Лили", handle: "@ishot_lily", disc: "Мобилити", age: "31 год",
+      place: "домашняя студия · 07:30", streak: "152",
+      stats: [["18 мин", "в день"], ["42", "упражнения"], ["152", "дня стрик"]],
+      quote: "«Самая скучная колонка выпуска. И самая полезная.»",
+      rows: [["14 окт", "Тазобедренный + дыхание", "18 мин", "—"], ["13 окт", "Грудной отдел", "16 мин", "—"], ["12 окт", "Стопы, голеностоп", "14 мин", "—"]]
+    },
+    nadia: {
+      ru: "Надия", handle: "@ishot_nadia", disc: "Бокс", age: "29 лет",
+      place: "зал на Строителей · 20:00", streak: "44",
+      stats: [["9", "раундов"], ["3", "тренировки/нед"], ["44", "дня стрик"]],
+      quote: "«Раунды считаю вслух — привычка с первого зала, теперь это метроном.»",
+      rows: [["14 окт", "Мешок 9 раундов", "9×3 мин", "8.5"], ["12 окт", "Работа ног, скакалка", "25 мин", "7.0"], ["10 окт", "Лапы", "8 раундов", "8.0"]]
+    },
+    yuki: {
+      ru: "Юки", handle: "@ishot_yuki", disc: "Бег", age: "28 лет",
+      place: "набережная и дамба · 06:00", streak: "73",
+      stats: [["42 км", "максимум"], ["1 260 км", "за год"], ["90 мин", "длинная"]],
+      quote: "«Считаю не километры, а часы под нагрузкой. Так честнее к телу.»",
+      rows: [["14 окт", "Ровный 12 км", "12 км", "5.0"], ["12 окт", "Длинная 24 км", "24 км", "6.0"], ["10 окт", "Восстановительный 6 км", "6 км", "3.5"]]
+    },
+    clara: {
+      ru: "Клара", handle: "@ishot_clara", disc: "Плавание", age: "30 лет",
+      place: "бассейн, дорожка №3 · 06:30", streak: "118",
+      stats: [["2 400 м", "объём"], ["4", "заплыва/нед"], ["118", "дней стрик"]],
+      quote: "«Плечи болят от зала — иду в воду. Вода прощает больше, чем штанга.»",
+      rows: [["14 окт", "Кроль 2 400 м", "2 400 м", "7.0"], ["12 окт", "Техника, лопатки", "1 800 м", "5.5"], ["9 окт", "Интервалы 10×100 м", "2 600 м", "8.0"]]
+    }
+  };
+
+  var sheet = document.getElementById("sheet");
+  var sheetImg = document.getElementById("sheetImg");
+  var sheetName = document.getElementById("sheetName");
+  var sheetDisc = document.getElementById("sheetDisc");
+  var sheetMeta = document.getElementById("sheetMeta");
+  var sheetQuote = document.getElementById("sheetQuote");
+  var sheetStats = document.getElementById("sheetStats");
+  var sheetRows = document.getElementById("sheetRows");
+  var lastCard = null;
+
+  function openSheet(key, card) {
+    var d = PROFILES[key];
+    if (!d || !sheet) return;
+    var img = card ? card.querySelector("img") : null;
+    if (sheetImg) {
+      if (img && img.getAttribute("src")) {
+        sheetImg.hidden = false;
+        sheetImg.src = img.getAttribute("src");
+        sheetImg.alt = img.alt || ("Профиль: " + d.ru);
+      } else {
+        sheetImg.hidden = true;
+        sheetImg.removeAttribute("src");
+      }
+      sheet.classList.toggle("no-media", sheetImg.hidden);
+    }
+    sheetDisc.textContent = "Профиль · " + d.disc;
+    sheetName.textContent = d.ru;
+    sheetMeta.textContent = d.handle + " · " + d.age + " · " + d.place + " · стрик " + d.streak + " дней";
+    sheetQuote.textContent = d.quote;
+    sheetStats.innerHTML = d.stats.map(function (s) {
+      return '<div><b>' + s[0] + '</b><span>' + s[1] + '</span></div>';
+    }).join("");
+    sheetRows.innerHTML = d.rows.map(function (r) {
+      return '<tr><td>' + r[0] + '</td><td>' + r[1] + '</td><td class="n">' + r[2] + '</td><td>' + r[3] + '</td></tr>';
+    }).join("");
+    sheet.hidden = false;
+    lastCard = card || null;
+    document.body.style.overflow = "hidden";
+    var x = sheet.querySelector(".sheet-x");
+    if (x) x.focus();
+  }
+
+  function closeSheet() {
+    if (!sheet || sheet.hidden) return;
+    sheet.hidden = true;
+    document.body.style.overflow = "";
+    if (lastCard && lastCard.focus) lastCard.focus();
+  }
+
+  document.querySelectorAll("[data-profile]").forEach(function (card) {
+    card.addEventListener("click", function (e) {
+      if (e.target.closest("[data-sheet-close]")) return;
+      if (e.target.closest("a")) return;
+      openSheet(card.dataset.profile, card);
+    });
+    var native = card.tagName === "BUTTON" || card.tagName === "A";
+    card.addEventListener("keydown", function (e) {
+      if (native) return;
+      if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
+        e.preventDefault();
+        openSheet(card.dataset.profile, card);
+      }
+    });
+  });
+  if (sheet) {
+    sheet.querySelectorAll("[data-sheet-close]").forEach(function (el) {
+      el.addEventListener("click", closeSheet);
+    });
+  }
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeSheet();
+  });
 
   /* ---- roster filter ----------------------------------------- */
   var grid = document.getElementById("rosterGrid");
