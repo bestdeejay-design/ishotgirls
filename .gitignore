@@ -1,37 +1,29 @@
-```
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-env/
-venv/
-.venv/
-.ENV
-.ENV.*
-pip-log.txt
-pip-delete-this-directory.txt
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.log
-*.pot
-*.pyc
-*.pyo
-*.pyd
-.MF
-tags
-TAGS
+# --- исходники изображений (полноразмерные PNG из генератора) ---
+_raw/
+# --- временные файлы инструментов ---
+tools/.cache/
 *.tmp
 *.temp
 *.bak
 *.save
 *~
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.coverage
+*.log
+
+# --- Node (только для локальных инструментов в tools/) ---
+node_modules/
+package-lock.json
+
+# --- OS / редакторы ---
 .DS_Store
 Thumbs.db
-```
+.idea/
+.vscode/

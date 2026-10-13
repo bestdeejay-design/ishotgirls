@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://bestdeejay-design.github.io/ishotgirls/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://bestdeejay-design.github.io/ishotgirls/assets/img/hero-1000.webp</image:loc>
+      <image:title>ISHOTGIRLS — Issue №02, обложка</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bestdeejay-design.github.io/ishotgirls/assets/img/a01-900.webp</image:loc>
+      <image:title>Anna — силовой цикл, досье A01</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bestdeejay-design.github.io/ishotgirls/assets/img/a02-900.webp</image:loc>
+      <image:title>Maria — пауэрлифтинг, досье A02</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bestdeejay-design.github.io/ishotgirls/assets/img/a03-900.webp</image:loc>
+      <image:title>Sofia — тяжёлая атлетика, досье A03</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bestdeejay-design.github.io/ishotgirls/assets/img/a04-900.webp</image:loc>
+      <image:title>Olivia — марафон, досье A04</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bestdeejay-design.github.io/ishotgirls/assets/img/a05-900.webp</image:loc>
+      <image:title>Emma — питание, досье A05</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bestdeejay-design.github.io/ishotgirls/assets/img/a06-900.webp</image:loc>
+      <image:title>Lily — мобилити, досье A06</image:title>
+    </image:image>
+  </url>
+</urlset>
